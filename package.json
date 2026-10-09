@@ -4,8 +4,7 @@
   "description": "Giao diện thiệp cưới Bustle - Gói VIP meHappy",
   "scripts": {
     "dev": "node server.js",
-    "start": "node server.js",
-    "build": "echo 'Static build'"
+    "start": "node server.js"
   },
   "keywords": [
     "wedding",
