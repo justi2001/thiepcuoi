@@ -1,0 +1,7 @@
+node_modules/
+*.log
+test_thumb.jpg
+detailed_summary*.txt
+drive_dump.json
+.DS_Store
+Thumbs.db

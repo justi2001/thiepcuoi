@@ -1,0 +1,383 @@
+
+==================== SECTION 1: section-1 (Sections) ====================
+Props: {"bgImage":"https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/b82c32ca-72d3-48bd-a214-b1b95c3a29b9.webp","height":"684px"}
+  - [Sections] (id: section-1)  
+    - [Image] (id: CORXp1ex2a)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: Ai8nm41v_m)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: woyAuP8xG7)  text: "Xuân Thịnh"
+    - [Text] (id: 3E4gvbct07)  text: "Diễm Hằng"
+    - [Text] (id: aMWNsogCi2)  text: "&amp;"
+    - [Text] (id: a0mXtHoNYh)  text: "21/09/2026 Nhà Gái - 22/09/2026 Nhà Trai"
+    - [Button] (id: JIYSBOimh2)  
+      - [Text] (id: Y5iF1mYomr)  text: "Gửi lời chúc"
+      - [Icon] (id: 85b7JP-sXe)  
+    - [Button] (id: DgnoTPR0TO)  text: "Gửi lời chúc"
+      - [Text] (id: n0nW6RIW42)  text: "Gửi lời chúc"
+      - [Icon] (id: fm-VN1G1vB)  
+      - [Icon] (id: i9pgF1A-Fs)  
+      - [Text] (id: W71fxubyyc)  text: "Mừng cưới"
+    - [Button] (id: xdz0JqhAvs)  text: "Mừng cưới"
+      - [Text] (id: s88QIGUzeL)  text: "Gửi lời chúc"
+      - [Icon] (id: TCEyD2oitn)  
+      - [Icon] (id: 3RnIhs52Ss)  
+      - [Text] (id: 7BbExzWwfa)  text: "Mừng cưới"
+      - [Icon] (id: DYcRYzKDox)  
+      - [Text] (id: J9ATpgIHrv)  text: "Xác nhận tham dự"
+
+==================== SECTION 2: rnh6p9wLvv (Sections) ====================
+Props: {"background":"#f8f9fa","height":"1799px"}
+  - [Sections] (id: rnh6p9wLvv)  
+    - [Container] (id: CQK-ar4zZG)  
+    - [Image] (id: _7-LLvOTRm)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: 3q9oTHYF7s)  text: "CHUYỆN CHÚNG MÌNH"
+    - [Text] (id: sUsnKAIqQz)  text: "Chúng mình quen nhau khi cùng làm việc ở công ty. "
+    - [Image] (id: scpZxcBlqD)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: W6xCnxpkU3)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: SWlHH8qzoQ)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+
+==================== SECTION 3: 2wg_W4CrDg (Sections) ====================
+Props: {"background":"#f8f9fa","height":"662px"}
+  - [Sections] (id: 2wg_W4CrDg)  
+    - [Container] (id: 3AeEt04ufe)  
+    - [Text] (id: 9zbCANUvS8)  text: "TRÂN TRỌNG KÍNH MỜI"
+    - [Text] (id: uBCkd5XO40)  text: "Bạn và người thương"
+    - [Text] (id: VOavpyoiPc)  text: "JUN 2026"
+    - [Text] (id: yJYpUM7xEH)  text: "Mon&nbsp; &nbsp; &nbsp;Tue&nbsp; &nbsp; &nbsp;Wed&"
+    - [Text] (id: F_gtHs-9rE)  text: "11&nbsp; &nbsp; &nbsp; &nbsp;12&nbsp; &nbsp; &nbsp"
+    - [Image] (id: AnsG2XRiz-)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: Fx3WUZm9Fr)  text: "Save the date"
+    - [Text] (id: qOCUmReQe_)  text: "Xuân Thịnh"
+    - [Text] (id: vnnu2J1Gej)  text: "Diễm Hằng"
+    - [Text] (id: kLOV-I94sC)  text: "&amp;"
+    - [Text] (id: jXiz-PFWpm)  text: "11:00 Thứ 5 ngày 14 thg 06, 2026"
+    - [Text] (id: 5BDkbnA110)  text: "Tư gia nhà Trai"
+    - [Text] (id: qIEDoYrZPy)  text: "Xóm 9, Diễn Thái, Diễn Châu, Nghệ An."
+    - [Text] (id: tOqINzbuT_)  text: "Sự hiện diện của Quý khách là niềm vinh hạnh cho g"
+    - [Button] (id: 2GXuC7hIUf)  
+      - [Text] (id: nCeuOG4AS2)  text: " "
+      - [Icon] (id: LM50qROpNl)  
+    - [Button] (id: qVJkbL-3av)  text: " "
+      - [Text] (id: Tg1J1whzLN)  text: " "
+      - [Icon] (id: 2ny7Gtdr6z)  
+      - [Icon] (id: 2FdLLVU0cJ)  
+      - [Text] (id: 4CE7L5vGfK)  text: " "
+    - [Button] (id: SkWD3_9bW7)  text: " "
+      - [Text] (id: mj4ODT1zUj)  text: " "
+      - [Icon] (id: cyn1iwYhcW)  
+      - [Icon] (id: s9dJGHV5v1)  
+      - [Text] (id: MVtlceN1Ay)  text: " "
+
+==================== SECTION 4: fRo8vLxb9A (Sections) ====================
+Props: {"background":"#f8f9fa","height":"290px"}
+  - [Sections] (id: fRo8vLxb9A)  
+    - [Image] (id: 94jS3HWY_y)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Container] (id: k4BPQLzNWh)  
+    - [Button] (id: ix76jaBU-u)  
+      - [Text] (id: 2CaYlGK5vy)  text: "CHÂN DUNG CHÚ RỂ"
+      - [Icon] (id: bRrzrr6MlY)  
+    - [Button] (id: b8n17ZYsbw)  text: "CHÂN DUNG CHÚ RỂ"
+      - [Text] (id: iBq0NlL8XA)  text: "CHÂN DUNG CHÚ RỂ"
+      - [Icon] (id: wUh8shrYrH)  
+      - [Icon] (id: 3RVEozESxy)  
+      - [Text] (id: olY8wl0Cox)  text: "CHÂN DUNG CÔ DÂU"
+
+==================== SECTION 5: I5rKypLN3L (Sections) ====================
+Props: {"background":"#f8f9fa","height":"972px"}
+  - [Sections] (id: I5rKypLN3L)  
+    - [Image] (id: xFuH0H9Q-L)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Container] (id: 8Cu9rY3Wpt)  
+    - [Container] (id: QNO-rPB1bU)  
+    - [Icon] (id: BKaFy0EvFx)  
+    - [Image] (id: h3p0-eEHlz)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: axO6tgLrTU)  text: "Xuân Thịnh"
+    - [Text] (id: Bi33lrgo6j)  text: "Nguyễn Thịnh, chàng trai đến từ Nghệ An
+Mỗi ngày t"
+
+==================== SECTION 6: kuORH64I5a (Sections) ====================
+Props: {"background":"#f8f9fa","height":"972px"}
+  - [Sections] (id: kuORH64I5a)  
+    - [Image] (id: FD8KLXF2O7)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Container] (id: mOh73WQGfV)  
+    - [Container] (id: A39M1xOjT9)  
+    - [Icon] (id: 1X3mmPMDK7)  
+    - [Image] (id: 4fJN6VWNY2)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: mqTRvPiL5v)  text: "Diễm Hằng"
+    - [Text] (id: dDpuUPryAH)  text: "Diễm Hằng, cô gái nhỏ xinh đến từ, Bắc Ninh
+Cái gọ"
+
+==================== SECTION 7: jXXgI_MTWg (Sections) ====================
+Props: {"background":"#F8F6F6","height":"1412px"}
+  - [Sections] (id: jXXgI_MTWg)  
+    - [Icon] (id: oanCeKx9zS)  
+    - [Text] (id: WSj0WNan09)  text: "XEM THÊM"
+    - [Image] (id: Ht2YlVAgQQ)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: 7tE64oH-OS)  text: "BỘ SƯU TẬP ẢNH CƯỚI"
+    - [Image] (id: zOSMSN2BS1)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: -6ramQIJdW)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: cNnz3sbE4_)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: hZ7A_NYa_m)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: GESP8kfyc2)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: heH5Y9EbHo)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: Wdjx7hIC0W)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: 0ExL_7tpEe)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: TQ3PrCrsNc)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: BL5CY2DeuV)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+
+==================== SECTION 8: EdbwuKrYUN (Sections) ====================
+Props: {"background":"#f8f9fa","bgImage":"https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/1053173f-c2ab-43f4-9295-5a4292104fa2.webp","height":"286px"}
+  - [Sections] (id: EdbwuKrYUN)  
+    - [Text] (id: F_fvsxPdva)  text: "Xem video cưới của chúng tôi!"
+    - [Text] (id: 7_ZtA_qZXx)  text: "Gặp nhiều người ở thời điểm khác nhau cũng không h"
+    - [Icon] (id: n1J6mrOuQY)  
+
+==================== SECTION 9: BfXUuNCVSM (Sections) ====================
+Props: {"background":"#FFFFFF","height":"247px"}
+  - [Sections] (id: BfXUuNCVSM)  
+    - [Container] (id: 35zRSiXSib)  
+    - [Button] (id: 8VFSdfhZHT)  
+      - [Icon] (id: lju4LpaXWC)  
+      - [Text] (id: Es7IVQE3TQ)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+    - [Button] (id: vLKzUhqDNr)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+      - [Icon] (id: vAHnYVBwv2)  
+      - [Text] (id: SYFksj2T1u)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+      - [Icon] (id: rPBpbYARLS)  
+      - [Text] (id: DuFrOClOre)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+    - [Button] (id: IuWgsWdpTN)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+      - [Icon] (id: MG5xnt3Y-3)  
+      - [Text] (id: WPktkurGLF)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+      - [Icon] (id: XlsKwlGMRA)  
+      - [Text] (id: mOgrmLYkMV)  text: "LỊCH CƯỚI NHÀ CÔ DÂU"
+    - [Button] (id: kLaDao7Kqa)  text: "LỊCH CƯỚI NHÀ CÔ DÂU"
+      - [Icon] (id: oXEraCIMmr)  
+      - [Text] (id: M1X4h-3C-u)  text: "LỊCH CƯỚI NHÀ CHÚ RỂ"
+      - [Icon] (id: 68wNgAz-hY)  
+      - [Text] (id: xK4PiDIzOt)  text: "LỊCH CƯỚI NHÀ CÔ DÂU"
+      - [Icon] (id: PtAqX_o6ni)  
+      - [Text] (id: NSj28RRCEY)  text: "LỊCH CƯỚI NHÀ CÔ DÂU"
+
+==================== SECTION 10: Am78eolXM7 (Sections) ====================
+Props: {"background":"#FFFFFF","height":"610px"}
+  - [Sections] (id: Am78eolXM7)  
+    - [Icon] (id: 5aKgl6hvjd)  
+    - [Calendar] (id: dFKP3KbyBD)  
+    - [Text] (id: KfsWvWI0u1)  text: "10:00 Thứ 7 ngày 06 thg 06, 2026"
+    - [Text] (id: jOVvraAvNR)  text: "(Tức ngày 02/05 năm Bính Ngọ 2026)"
+    - [Count] (id: RiRmAtQq3_)  
+
+==================== SECTION 11: gYgIz7sQNB (Sections) ====================
+Props: {"background":"#FFFFFF","height":"610px"}
+  - [Sections] (id: gYgIz7sQNB)  
+    - [Icon] (id: GDM7cLIRa5)  
+    - [Calendar] (id: StLb6P7TY-)  
+    - [Text] (id: IG23dS3FsQ)  text: "10:00 Thứ 6 ngày 05 thg 06, 2026"
+    - [Text] (id: SOqEy9ToIw)  text: "(Tức ngày 02/05 năm Bính Ngọ 2026)"
+    - [Count] (id: qdkO2825lb)  
+
+==================== SECTION 12: eFpIU3FvAu (Sections) ====================
+Props: {"background":"#F8F6F6","height":"607px"}
+  - [Sections] (id: eFpIU3FvAu)  
+    - [Text] (id: N7KXwxGJok)  text: "LỜI NGỎ"
+    - [Image] (id: -HFTd0_i2_)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: 9bTYs4pZAW)  text: "Cảm ơn bạn đã dành tình cảm cho vợ chồng mình. Chú"
+    - [Image] (id: 9CKzMMIumB)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+
+==================== SECTION 13: Nw_PYgz7j3 (Sections) ====================
+Props: {"background":"#f8f9fa","bgImage":"https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/33cb569f-842d-4b49-8f9d-18b48bca9950.webp","height":"579px"}
+  - [Sections] (id: Nw_PYgz7j3)  
+    - [Icon] (id: PNgU_6NI6o)  
+    - [Text] (id: 0RHFKs8iol)  text: "Chú Rể &amp; Cô Dâu"
+    - [Image] (id: zbDQnXbG1k)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: 0SvK1_RAq4)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Icon] (id: xfxr30iYHk)  
+    - [Icon] (id: 46K98dEgra)  
+    - [Text] (id: C8S70gr0U4)  text: "Xuân Thịnh"
+    - [Text] (id: jJR1YHhgSZ)  text: "Diễm Hằng"
+    - [Text] (id: 3ELr-_NGDm)  text: "NHÀ TRAI"
+    - [Text] (id: 3lQtS-nm_4)  text: "Nguyễn Xuân Dung"
+    - [Text] (id: 0MYrgBsPw4)  text: "Nghiêm Xuân Hợp"
+    - [Text] (id: Fst0aH08ob)  text: "Nguyễn Thị Tuyết"
+    - [Text] (id: 4tKf60i_dC)  text: "Tư gia : Xóm 9, Diễn Thái<br>Diễn Châu, Nghệ An."
+    - [Text] (id: Hif6CeGKV_)  text: "Tư gia : Phố Chàng, Việt Tiến<br>Việt Yên, Bắc Gia"
+    - [Text] (id: jv23xiaPpi)  text: "Nguyễn Thị Loan"
+    - [Text] (id: C2sBsLviR8)  text: "NHÀ GÁI"
+
+==================== SECTION 14: 76XHTGm78g (Sections) ====================
+Props: {"background":"#F8F6F6","height":"1303px"}
+  - [Sections] (id: 76XHTGm78g)  
+    - [Container] (id: 03NMDXkEn_)  
+    - [Button] (id: xqJAfbTHWx)  text: "Xem bản đồ"
+      - [Text] (id: cijy2lJXrn)  text: "Xem bản đồ"
+      - [Text] (id: krYHJQ43sh)  text: "Xem bản đồ"
+      - [Text] (id: 7QNzQI2bAq)  text: "+ Thêm vào lịch"
+      - [Text] (id: CQ0lrqePVp)  text: "+ Thêm vào lịch"
+    - [Button] (id: AzGmtronNz)  
+      - [Text] (id: 99h9YIzCY1)  text: "Xem bản đồ"
+    - [Text] (id: BDWJaq6YHV)  text: "Xóm 9, Diễn Thái, Diễn Châu, Nghệ An."
+    - [Text] (id: X9P4Shzvcf)  text: "Tư gia nhà Trai"
+    - [Icon] (id: d0vULr7HoI)  
+    - [Text] (id: Yap7DWwPLy)  text: "10:00 Thứ 6 ngày 05 thg 06, 2026"
+    - [Icon] (id: sqce4YqYDv)  
+    - [Text] (id: HOofCHXSo0)  text: "Tiệc Cưới Nhà Trai"
+    - [Image] (id: Y9NB8htHEl)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Container] (id: -xvzK9iPHa)  
+    - [Button] (id: ANoZsgPYF-)  text: "Xem bản đồ"
+      - [Text] (id: luyt7QPP88)  text: "Xem bản đồ"
+      - [Text] (id: ifSDEsgN5T)  text: "Xem bản đồ"
+      - [Text] (id: ubbv-34yTK)  text: "+ Thêm vào lịch"
+      - [Text] (id: bgFZ7R9d-l)  text: "Mừng cưới"
+    - [Button] (id: quyzGaJz_e)  
+      - [Text] (id: nSO7ajhmbE)  text: "Xác nhận tham dự"
+    - [Text] (id: 1jvbhMwqHH)  text: "Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang"
+    - [Text] (id: yKpvPKspsR)  text: "Tư gia nhà Gái"
+    - [Icon] (id: l0u9b0OS4A)  
+    - [Text] (id: ebZ3iIMP0g)  text: "12:00 Thứ 6 ngày 05 thg 06, 2026"
+    - [Icon] (id: XeFlLOoxOi)  
+    - [Text] (id: FWlgsZ6Xwe)  text: "Lễ Vu Quy"
+    - [Image] (id: z8LnwV5_nV)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: IUknhvZiWR)  text: "Sự Kiện Cưới"
+    - [Text] (id: hb_lUV5yJ2)  text: "Hân hạnh đón tiếp Quý khách!"
+    - [Icon] (id: PFpDtb1UZk)  
+    - [Container] (id: y9sT_BaG_6)  
+    - [Container] (id: TXSjM-mgmk)  
+    - [Image] (id: FN-7tCQQ0H)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: Tf7_VXn7IW)  text: "Tiệc Cưới Nhà Gái"
+    - [Text] (id: u8bPD8UYV9)  text: "10:00 Thứ 6 ngày 05 thg 06, 2026"
+    - [Text] (id: 5-iEKAt52L)  text: "Tư gia nhà Gái"
+    - [Text] (id: mJfZ0VmCEW)  text: "Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang"
+    - [Icon] (id: H9f9R2uhGO)  
+    - [Icon] (id: LlzplfkChp)  
+    - [Button] (id: OzVZsMLMMN)  
+      - [Text] (id: wnGjib-N0j)  text: "Xem bản đồ"
+    - [Button] (id: A-q2t3xkqG)  text: "Xem bản đồ"
+      - [Text] (id: QYFYqjbsti)  text: "Xem bản đồ"
+      - [Text] (id: 84rMlByDzk)  text: "+ Thêm vào lịch"
+    - [Button] (id: sJEfIODJBz)  text: "Xem bản đồ"
+      - [Text] (id: 3xkri6omjn)  text: "Xem bản đồ"
+      - [Text] (id: MQs0QnIoVG)  text: "Xem bản đồ"
+      - [Text] (id: x74z4iIpc_)  text: "+ Thêm vào lịch"
+      - [Text] (id: 1h7ln4xWgU)  text: "Mừng cưới"
+    - [Button] (id: eQsMvQhbPq)  
+      - [Text] (id: GMgKXxXRGg)  text: "Xác nhận tham dự"
+    - [Icon] (id: mIkwOWi9gu)  
+    - [Icon] (id: vddjBuFffF)  
+    - [Text] (id: G8nJQFuT11)  text: "Xóm 9, Diễn Thái, Diễn Châu, Nghệ An."
+    - [Text] (id: ZtPb1PpbgJ)  text: "Tư gia nhà Trai"
+    - [Text] (id: ocNjTRXX24)  text: "10:00 Thứ 6 ngày 05 thg 06, 2026"
+    - [Text] (id: hTW4YiEXpI)  text: "Lễ Thành Hôn"
+    - [Image] (id: qtQSXujtBd)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+
+==================== SECTION 15: 96FZ8YNG2r (Sections) ====================
+Props: {"background":"#f8f9fa","bgImage":"https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/395221e2-cc67-4758-969b-88634a471910-full.webp","height":"661px"}
+  - [Sections] (id: 96FZ8YNG2r)  
+    - [Container] (id: 2z7fv1oRAL)  
+    - [Container] (id: g-dxXMw96h)  
+    - [Icon] (id: dLHiIIWWBo)  
+    - [Image] (id: mR0K3FTqYH)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Text] (id: UawYHz6Fcs)  text: "Xác Nhận Tham Dự"
+    - [Text] (id: rqdqdnCwwh)  text: "Xác nhận tham dự đám cưới của Thịnh &amp; Hằng
+Điề"
+    - [Text] (id: EcrTJH60o0)  text: "&lt;&lt; Xem lại thiệp mời"
+    - [Text] (id: iTzYmazjN2)  text: "Mừng cưới &gt;&gt;"
+    - [RSVPForm] (id: mzXonM6X7t)  
+
+==================== SECTION 16: EILYZfrwYL (Sections) ====================
+Props: {"background":"#f8f9fa","bgImage":"https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/9637683b-0d54-46e4-8af8-ec8b4e6c65f8.webp","height":"429px"}
+  - [Sections] (id: EILYZfrwYL)  
+    - [Text] (id: lXWgDoOFvD)  text: "Hộp mừng cưới"
+    - [Button] (id: I3TMqDWRlx)  
+      - [Text] (id: GuvsCJd5J0)  
+      - [Icon] (id: Aca4Whtis4)  
+      - [Icon] (id: lWkVTeITYZ)  
+      - [Text] (id: 5NOOwwjpyb)  
+    - [Text] (id: lrNmUyBGM1)  text: "Vợ chồng xin cảm ơn tất cả tình cảm của mọi người "
+
+==================== SECTION 17: EVaHxz_CT6 (Sections) ====================
+Props: {"background":"#FFFFFF","height":"867px"}
+  - [Sections] (id: EVaHxz_CT6)  
+    - [Container] (id: 0dL_eKNKdY)  
+    - [Icon] (id: AFsZgJNf0K)  
+    - [Text] (id: 6ikMNgm0Qp)  text: "Sổ Lưu Bút"
+    - [Text] (id: V_yU4v_bgM)  text: "Cảm ơn mọi người rất nhiều vì đã gửi những lời chú"
+    - [WishList] (id: jtjkTpipSN)  
+    - [WishForm] (id: 8yQ1teaHvS)  
+
+==================== SECTION 18: k3rjEcVYBq (Sections) ====================
+Props: {"background":"#f8f9fa","bgImage":"https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/782036c6-7859-4f87-b7c4-af541be42565.webp","height":"383px"}
+  - [Sections] (id: k3rjEcVYBq)  
+    - [Text] (id: wunX-cS1bg)  text: "Thank You"
+    - [Text] (id: 5VSCouy6Z4)  text: "Diễm Hằng -"
+    - [Text] (id: rds9UFH_bw)  text: "- Xuân Thịnh"
+    - [Text] (id: LYaHTXh9z2)  text: "&amp;"
+    - [Icon] (id: 0bCn0MKm_3)  
+
+==================== SECTION 19: MrXLsZZ0sO (Popup) ====================
+Props: {"height":"512px","width":"398px"}
+  - [Popup] (id: MrXLsZZ0sO)  
+    - [Text] (id: 1NLtFBFKLx)  text: "Hộp mừng cưới"
+    - [Text] (id: DxnSlLINfX)  text: "Vợ chồng xin cảm ơn tất cả tình cảm của mọi người "
+    - [Text] (id: 35t4gDx3Uf)  text: ">> Gửi ảnh mừng cưới cho cô dâu"
+    - [Container] (id: uWEEih7Ct4)  
+    - [Container] (id: -s3bCRziQr)  
+    - [Text] (id: q87-epPZCX)  text: "MỪNG CƯỚI ĐẾN
+CHÚ RỂ"
+    - [Text] (id: iZAewQtAVa)  text: "MỪNG CƯỚI ĐẾN
+CÔ DÂU"
+    - [Text] (id: Wr2qNywHZg)  text: ">> Gửi ảnh mừng cưới cho chú rể"
+    - [Image] (id: OxmcngRH16)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Image] (id: uYjsMPjLSN)  url: "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/"
+    - [Button] (id: jL2ftFClXC)  
+      - [Text] (id: Yb02PRQz5l)  text: "Tải ảnh QR"
+      - [Text] (id: 7lMhYN7T0j)  text: "Tải ảnh QR"
+    - [Button] (id: wOH9YMKuc2)  text: "Tải ảnh QR"
+      - [Text] (id: zMpmOwVxMU)  text: "Tải ảnh QR"
+      - [Text] (id: ix52kEOjA_)  text: "Coppy STK"
+      - [Text] (id: RwUuyRBzsL)  text: "Coppy STK"
+    - [Button] (id: 702fgYnDYP)  text: "Tải ảnh QR"
+      - [Text] (id: 1US7GrxFjk)  text: "Tải ảnh QR"
+      - [Text] (id: 9FGsUffKK9)  text: "Coppy STK"
+      - [Text] (id: knTlr4m-j3)  text: "Coppy STK"
+      - [Text] (id: Qdv5-ysIUM)  text: "Coppy STK"
+    - [Button] (id: 44-0dV77Oj)  text: "Tải ảnh QR"
+      - [Text] (id: XOUo4QaBUG)  text: "Tải ảnh QR"
+      - [Text] (id: hXhzeWb6U8)  text: "Tải ảnh QR"
+      - [Text] (id: HtekQlCeMV)  text: "Tải ảnh QR"
+    - [Text] (id: mzQx3VgJDJ)  text: "Nguyễn Xuân Thịnh"
+    - [Text] (id: We56WKfnN1)  text: "0989000999999"
+    - [Text] (id: jbzz3HTCRS)  text: "Ngân Hàng MB Bank"
+    - [Text] (id: ZyNlL41UBU)  text: "Nghiêm Thị Hằng"
+    - [Text] (id: dIr0wOkgYM)  text: "66688899999999"
+    - [Text] (id: KePsz-P9_4)  text: "Ngân Hàng Techcombank"
+
+==================== SECTION 20: iuJSTB3cqd (Popup) ====================
+Props: {"height":"380px","width":"383px"}
+  - [Popup] (id: iuJSTB3cqd)  
+    - [Text] (id: ailo5owpiQ)  text: "Video cưới"
+    - [Text] (id: caqAZG7A3x)  text: "Chúng tôi luôn có những kỷ niệm tuyệt vời cùng nha"
+    - [Video] (id: kSfmE-ldnv)  
+      - [Icon] (id: oHksMisqQB)  
+      - [Icon] (id: 7u_L1rf-B3)  
+    - [Video] (id: RXaJ8xMVvh)  
+
+==================== SECTION 21: kulj3bDBVD (Popup) ====================
+Props: {"padding":[4,4,4,4],"margin":[4,4,4,4],"height":"79px","width":"246px"}
+  - [Popup] (id: kulj3bDBVD)  
+    - [Text] (id: yCqqz1j5OD)  text: "Bạn sẽ tham gia chứ ?"
+    - [Button] (id: mXLvipPx-K)  
+      - [Text] (id: BOqfmbMC-n)  text: "Xác nhận tham dự"
+      - [Text] (id: HO-0M5jRTW)  text: "Xác nhận tham dự"
+
+==================== SECTION 22: KrHiKo5NAv (AlbumModal) ====================
+Props: {}
+  - [AlbumModal] (id: KrHiKo5NAv)  
+
+==================== SECTION 23: fmnm1DCdeX (QuickActions) ====================
+Props: {}
+  - [QuickActions] (id: fmnm1DCdeX)  
+
+==================== SECTION 24: DoPjOyBcs3 (AlbumModal) ====================
+Props: {}
+  - [AlbumModal] (id: DoPjOyBcs3)  
+
+==================== SECTION 25: Wu2JUkt6GF (AlbumModal) ====================
+Props: {}
+  - [AlbumModal] (id: Wu2JUkt6GF)  

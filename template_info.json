@@ -1,0 +1,125 @@
+{
+  "id": 71,
+  "name": "Giao diện Bustle - Gói VIP",
+  "description": "Giao diện náo nhiệt nhộn nhịp, mang đến sự thích thú và hào hứng. Tạo ra những nét đặc sắc riêng vô cùng tinh tế, đáng yêu.",
+  "imageUrl": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/10d19d0c-0b01-4123-b1f1-c695eceece1d-full.webp",
+  "tier": "vip",
+  "category": "wedding",
+  "tags": [
+    "Thiệp Sang Trọng",
+    "Thiệp hiện đại"
+  ],
+  "badge": "HOT",
+  "badgeColor": "#FF5733",
+  "theme": {},
+  "seoSettings": {
+    "title": "Giao diện Bustle - Gói VIP",
+    "imageUrl": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/b82c32ca-72d3-48bd-a214-b1b95c3a29b9.webp",
+    "keywords": [
+      "mewedding",
+      "meHappy",
+      "Wedding",
+      "Đám cưới",
+      "Thiệp cưới",
+      "Tạo Thiệp cưới miễn phí",
+      "Thiệp cưới online",
+      "Thiệp cưới điện tử",
+      "Website đám cưới",
+      "Tạo thiệp cưới online miễn phí",
+      "Tạo thiệp miễn phí",
+      "Thiệp cưới online miễn phí",
+      "Tạo Thiệp cưới điện tử miễn phí",
+      "Weddings",
+      "Wedding days",
+      "Wedding planner",
+      "Thiệp mời đám cưới"
+    ],
+    "titleGuest": "Thân mời {guestName} tham dự lễ cưới của {TenChuRe} & {TenCoDau}",
+    "description": "Sử dụng Full các tính năng nâng cao, tính năng đặc biệt của thiệp, sử dụng trọn đời.",
+    "favoriteIconUrl": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/f21f63e3-a62f-4f8c-b6cc-825c345e77f2.webp",
+    "descriptionGuest": "Sự hiện diện của {guestName} là niềm vinh hạnh cho gia đình chúng tôi"
+  },
+  "effects": {
+    "maxSize": 10,
+    "minSize": 5,
+    "fallMode": "wobble",
+    "imageUrl": "data:image/svg+xml;base64,CgkJCQk8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCQkJCQk8ZGVmcz4KCQkJCQkJPGZpbHRlciBpZD0ic2hhZG93IiB4PSItNTAlIiB5PSItNTAlIiB3aWR0aD0iMjAwJSIgaGVpZ2h0PSIyMDAlIj4KCQkJCQkJCTxmZURyb3BTaGFkb3cgZHg9IjEiIGR5PSIxIiBzdGREZXZpYXRpb249IjEiIGZsb29kLWNvbG9yPSJyZ2JhKDAsMCwwLDAuMykiLz4KCQkJCQkJPC9maWx0ZXI+CgkJCQkJPC9kZWZzPgoJCQkJCTxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiIGZpbGw9IiNmZmZmZmYiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CgkJCQk8L3N2Zz4KCQkJ",
+    "fallSpeed": 5,
+    "imageUrls": [
+      {
+        "url": "data:image/svg+xml;base64,CgkJCQk8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0Ij4KCQkJCQk8ZGVmcz4KCQkJCQkJPGZpbHRlciBpZD0ic2hhZG93IiB4PSItNTAlIiB5PSItNTAlIiB3aWR0aD0iMjAwJSIgaGVpZ2h0PSIyMDAlIj4KCQkJCQkJCTxmZURyb3BTaGFkb3cgZHg9IjEiIGR5PSIxIiBzdGREZXZpYXRpb249IjEiIGZsb29kLWNvbG9yPSJyZ2JhKDAsMCwwLDAuMykiLz4KCQkJCQkJPC9maWx0ZXI+CgkJCQkJPC9kZWZzPgoJCQkJCTxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiIGZpbGw9IiNmZmZmZmYiIGZpbHRlcj0idXJsKCNzaGFkb3cpIi8+CgkJCQk8L3N2Zz4KCQkJ",
+        "color": "#ffffff"
+      },
+      {
+        "url": "data:image/svg+xml;base64,CgkJCQk8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjOTY1RDVEIj4KCQkJCQk8cGF0aCBkPSJNMTIgMjEuMzVMMTAuNTUgMjAuMDNDNS40IDE1LjM2IDIgMTIuMjcgMiA4LjVDMiA1LjQxIDQuNDIgMyA3LjUgM0M5LjI0IDMgMTAuOTEgMy44MSAxMiA1LjA4QzEzLjA5IDMuODEgMTQuNzYgMyAxNi41IDNDMTkuNTggMyAyMiA1LjQxIDIyIDguNUMyMiAxMi4yNyAxOC42IDE1LjM2IDEzLjQ1IDIwLjAzTDEyIDIxLjM1WiIvPgoJCQkJPC9zdmc+CgkJCQ==",
+        "color": "#965D5D"
+      }
+    ],
+    "coverageLevel": 25
+  },
+  "audioSettings": {
+    "audioUrl": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/audio-templates/8fe899fe-9769-440a-bc4c-f7171f46a5d5.mp3",
+    "autoPlay": true,
+    "playIconUrl": "",
+    "pauseIconUrl": "",
+    "playIconColor": "#000000",
+    "pauseIconColor": "#000000",
+    "useDefaultIcons": true,
+    "enableAnimations": true
+  },
+  "fontMap": {
+    "SVN-Magellin.otf": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/350584bd-e18e-4036-a4e1-32cc1cb8c2f3.otf",
+    "Fz-Photograph.ttf": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/6109e7ef-d811-4e84-94da-7f785b71e510.ttf",
+    "1FTV-VIP-High-Spirited.otf": "https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/9f802fb1-db1d-4de5-a52d-aef48ceb3598.otf"
+  },
+  "openingEffect": {
+    "delay": 200,
+    "easing": "ease-out",
+    "enabled": true,
+    "duration": 1000,
+    "direction": "horizontal",
+    "leftPanelImage": "https://s3-hcm-r2.s3cloud.vn/template-opening-effect/left-invitation.png",
+    "topPanelZIndex": "left",
+    "rightPanelImage": "https://s3-hcm-r2.s3cloud.vn/template-opening-effect/right-invitation.png",
+    "mobileLeftPanelImage": "https://s3-hcm-r2.s3cloud.vn/template-opening-effect/left-thiep.webp",
+    "mobileRightPanelImage": "https://s3-hcm-r2.s3cloud.vn/template-opening-effect/right-thiep.webp"
+  },
+  "notificationSettings": {
+    "gap": 6000,
+    "loop": true,
+    "size": "small",
+    "theme": "card",
+    "offset": 16,
+    "radius": 12,
+    "shadow": "soft",
+    "enabled": true,
+    "iconUrl": "data:image/svg+xml;base64,PHN2ZyBzdHJva2U9ImN1cnJlbnRDb2xvciIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgaGVpZ2h0PSIyNCIgd2lkdGg9IjI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xOCA4QTYgNiAwIDAgMCA2IDhjMCA3LTMgOS0zIDloMThzLTMtMi0zLTkiPjwvcGF0aD48cGF0aCBkPSJNMTMuNzMgMjFhMiAyIDAgMCAxLTMuNDYgMCI+PC9wYXRoPjwvc3ZnPg==",
+    "maxWidth": 320,
+    "position": "top-right",
+    "showIcon": true,
+    "animation": "slide",
+    "iconColor": "#787878FF",
+    "progressBar": true,
+    "useCardFont": true,
+    "initialDelay": 6000,
+    "progressColor": "#F5BF64FF",
+    "useDefaultIcon": true,
+    "displayDuration": 8000,
+    "showCloseButton": true
+  },
+  "customEffects": {
+    "autoScroll": {
+      "speed": 6,
+      "enabled": true
+    }
+  },
+  "customHtml": null,
+  "customHtmlTrusted": true,
+  "pageSettings": {
+    "mobileOnly": false,
+    "mobileWidth": "400px",
+    "desktopWidth": "960px",
+    "mobilePageBackgroundColor": "#ffffff"
+  },
+  "isCard": false
+}

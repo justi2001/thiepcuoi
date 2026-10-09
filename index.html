@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Giao diện Bustle - Gói VIP | Thiệp Cưới Online</title>
+  <meta name="description" content="Sử dụng Full các tính năng nâng cao, tính năng đặc biệt của thiệp, sử dụng trọn đời.">
+  <meta property="og:title" content="Giao diện Bustle - Gói VIP">
+  <meta property="og:description" content="Sử dụng Full các tính năng nâng cao, tính năng đặc biệt của thiệp, sử dụng trọn đời.">
+  <meta property="og:image" content="images/wedding/PQD06107.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/f21f63e3-a62f-4f8c-b6cc-825c345e77f2.webp">
+
+  <!-- Google Fonts & Custom Wedding Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Judson:wght@400;700&family=Mulish:wght@400;600;700&family=Open+Sans:wght@400;600&family=Philosopher:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&family=Taviraj:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Audio Element -->
+  <audio id="wedding-audio" loop preload="auto">
+    <source src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/audio-templates/8fe899fe-9769-440a-bc4c-f7171f46a5d5.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Envelope Opening Effect Doors -->
+  <div id="envelope-overlay" class="envelope-overlay">
+    <div class="envelope-panel left-panel">
+      <img src="https://s3-hcm-r2.s3cloud.vn/template-opening-effect/left-thiep.webp" alt="Left door">
+    </div>
+    <div class="envelope-panel right-panel">
+      <img src="https://s3-hcm-r2.s3cloud.vn/template-opening-effect/right-thiep.webp" alt="Right door">
+    </div>
+    <div class="envelope-center-btn" id="open-envelope-btn">
+      <div class="envelope-seal">
+        <div class="seal-icon">
+          <svg viewBox="0 0 24 24" width="34" height="34" fill="#ffffff">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <span class="seal-text">MỞ THIỆP CƯỚI</span>
+        <span class="seal-hint">Chạm để mở thiệp &amp; bật nhạc</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Falling Particles Container -->
+  <div id="particles-container" class="particles-container"></div>
+
+  <!-- Floating Audio Disc Control (Top Right) -->
+  <div id="audio-toggle-btn" class="audio-toggle-btn spinning" title="Bật/Tắt nhạc nền">
+    <div class="music-disc">
+      <div class="disc-groove"></div>
+      <div class="disc-center">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#987289">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Wrapper (Mobile Viewport 400px - 450px centered) -->
+  <div class="site-container">
+    <main class="invitation-app">
+
+      <!-- ================= SECTION 1: HERO / COVER ================= -->
+      <section id="section-hero" class="invitation-section section-hero">
+        <div class="hero-bg-layer" style="background-image: url('images/wedding/PQD06107.jpg');"></div>
+        <img class="hero-layer-image" src="images/wedding/PQD06107.jpg" alt="Wedding Cover">
+        <img class="hero-ribbon-decor" src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/f72cd2fd-9fd9-4fcb-8af6-8295de5a1097.webp" alt="Decor Lace">
+
+        <div class="hero-content">
+          <div class="hero-names">
+            <span class="groom-name">Xuân Thịnh</span>
+            <span class="ampersand">&amp;</span>
+            <span class="bride-name">Diễm Hằng</span>
+          </div>
+          <p class="hero-date">21/09/2026 Nhà Gái - 22/09/2026 Nhà Trai</p>
+          
+          <div class="hero-actions">
+            <button type="button" class="hero-btn" onclick="scrollToSection('section-guestbook')">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+              <span>Gửi lời chúc</span>
+            </button>
+            <button type="button" class="hero-btn hero-btn-primary" onclick="openPopup('popup-bank')">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+              <span>Mừng cưới</span>
+            </button>
+            <button type="button" class="hero-btn" onclick="scrollToSection('section-rsvp')">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span>Xác nhận tham dự</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: CHUYỆN CHÚNG MÌNH ================= -->
+      <section id="section-story" class="invitation-section section-story">
+        <div class="card-box story-card">
+          <div class="sticker-header">
+            <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/769c99a9-1d71-4301-a496-b1eea282a533.webp" alt="Wedding Decal">
+          </div>
+          <h2 class="section-title-taviraj">CHUYỆN CHÚNG MÌNH</h2>
+          <div class="story-text">
+            <p>Chúng mình quen nhau khi cùng làm việc ở công ty. Thịnh là cấp trên, Hằng là cấp dưới. Thường xuyên phải tương tác với nhau, nên cứ thế phát sinh tình cảm khi nào chả hay. Các cụ hay bảo nên tránh các trường hợp con thầy, vợ bạn, gái cơ quan để yêu đương. Ấy thế mà chả hiểu sao, dây tơ hồng siết chặt quá nên là 2 đứa cứ thế va vào nhau.</p>
+            <p>Yêu nhau nhùng nhằng thế mà giờ cũng hơn 3 năm, trải qua nhiều cảm xúc cùng nhau, vui có buồn có, nhưng tốt cái là chưa có chưa tay 😂. Mỗi đứa giờ 1 công việc, 1 định hướng khác nhau, nhưng có cái yêu nhau thì vẫn còn cùng nhau 🤣😍.</p>
+            <p>Thế là 1 ngày đẹp trời, Thịnh mua cái nhẫn, dẫn nàng đến quán bò bít tết khứa khứa uống rượu vang, rồi á là quỳ xuống hỏi mình cưới nhau nha, Hằng lia lịa gật đầu. Thế là giờ chúng mình có đám cưới, thế là chúng mình về chung 1 nhà đó mí bạn :)) Chuyện tình yêu chúng mình đơn giản thế thôi đó. Cảm ơn bạn đã đọc đến tận đây nhé !! Cảm ơn bạn vì đã dành tình cảm cho Vợ Chồng mình !!! Yêu bạn 😜❤️</p>
+          </div>
+        </div>
+
+        <div class="story-photos">
+          <div class="story-img-wrap">
+            <img src="images/wedding/PQD06286.jpg" alt="Chuyện chúng mình 1" loading="lazy">
+          </div>
+          <div class="story-img-wrap">
+            <img src="images/wedding/PQD06342.jpg" alt="Chuyện chúng mình 2" loading="lazy">
+          </div>
+          <div class="story-img-wrap">
+            <img src="images/wedding/PQD06385.jpg" alt="Chuyện chúng mình 3" loading="lazy">
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 3: TRÂN TRỌNG KÍNH MỜI / SAVE THE DATE ================= -->
+      <section id="section-invitation" class="invitation-section section-invitation">
+        <div class="card-box invitation-card">
+          <h2 class="invite-header-top">TRÂN TRỌNG KÍNH MỜI</h2>
+          <p class="invite-guest-label">Bạn và người thương</p>
+
+          <div class="calendar-preview-strip">
+            <div class="calendar-month-label">JUN 2026</div>
+            <div class="calendar-days-row">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+            <div class="calendar-dates-row">
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span class="highlight-date-wrapper">
+                <span class="date-num">14</span>
+                <img class="heart-stamp" src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/d9694628-f74b-4bdf-95b1-20bc987a78d6-full.webp" alt="Heart marker">
+              </span>
+              <span>15</span>
+              <span>16</span>
+              <span>17</span>
+            </div>
+          </div>
+
+          <h3 class="save-the-date-title">Save the date</h3>
+
+          <div class="invite-couple-names">
+            <span class="groom-name">Xuân Thịnh</span>
+            <span class="ampersand">&amp;</span>
+            <span class="bride-name">Diễm Hằng</span>
+          </div>
+
+          <p class="invite-datetime">11:00 Thứ 5 ngày 14 thg 06, 2026</p>
+          <p class="invite-location-label">Tư gia nhà Trai</p>
+          <p class="invite-location-address">Xóm 9, Diễn Thái, Diễn Châu, Nghệ An.</p>
+
+          <p class="invite-quote">Sự hiện diện của Quý khách là niềm vinh hạnh cho gia đình chúng tôi!</p>
+
+          <div class="invite-circle-actions">
+            <button class="circle-btn" onclick="addToGoogleCalendar('Lễ Cưới Xuân Thịnh & Diễm Hằng', '2026-06-14T11:00:00', '2026-06-14T14:00:00', 'Xóm 9, Diễn Thái, Diễn Châu, Nghệ An')" title="Thêm vào lịch">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="#ffffff"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+            </button>
+            <button class="circle-btn" onclick="openMapUrl('Xóm 9, Diễn Thái, Diễn Châu, Nghệ An')" title="Chỉ đường Google Maps">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="#ffffff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </button>
+            <button class="circle-btn" onclick="shareInvitation()" title="Chia sẻ thiệp">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="#ffffff"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 4: TABS CHÂN DUNG ================= -->
+      <section id="section-portrait-tabs" class="invitation-section section-portrait-tabs">
+        <div class="portrait-tabs-bg" style="background-image: url('images/wedding/PQD06779.jpg');">
+          <div class="portrait-tabs-container">
+            <button type="button" class="portrait-tab-btn active" id="tab-btn-groom" onclick="switchPortraitTab('groom')">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+              <span>CHÂN DUNG CHÚ RỂ</span>
+            </button>
+            <button type="button" class="portrait-tab-btn" id="tab-btn-bride" onclick="switchPortraitTab('bride')">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              <span>CHÂN DUNG CÔ DÂU</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 5: CHÂN DUNG CHÚ RỂ ================= -->
+      <section id="section-groom" class="invitation-section section-portrait portrait-groom">
+        <div class="portrait-photo-card">
+          <img src="images/wedding/PQD06734.jpg" alt="Chú rể Xuân Thịnh" loading="lazy">
+        </div>
+        <div class="card-box portrait-info-card">
+          <div class="sticker-header">
+            <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/769c99a9-1d71-4301-a496-b1eea282a533.webp" alt="Decal">
+          </div>
+          <h3 class="portrait-name">Xuân Thịnh</h3>
+          <p class="portrait-bio">
+            Nguyễn Thịnh, chàng trai đến từ Nghệ An.<br>
+            Mỗi ngày thức dậy bạn nghĩ đến 1 ai đó, trước khi đi ngủ bạn nghĩ đến 1 ai đó… Đó là 1 ngày trọn vẹn.<br>
+            Cảm ơn vì đã gặp được em "Diễm Hằng", anh mong sau này, dù có thế nào, chúng ta cũng mãi yêu thương nhau, mãi nắm tay nhau đi đến hết con đường còn lại em nhé !!
+          </p>
+          <div class="portrait-album-action">
+            <button type="button" class="outline-pill-btn" onclick="openAlbumModal('groom')">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Xem album ảnh chú rể</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 6: CHÂN DUNG CÔ DÂU ================= -->
+      <section id="section-bride" class="invitation-section section-portrait portrait-bride" style="display: none;">
+        <div class="portrait-photo-card">
+          <img src="images/wedding/PQD06742.jpg" alt="Cô dâu Diễm Hằng" loading="lazy">
+        </div>
+        <div class="card-box portrait-info-card">
+          <div class="sticker-header">
+            <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/769c99a9-1d71-4301-a496-b1eea282a533.webp" alt="Decal">
+          </div>
+          <h3 class="portrait-name">Diễm Hằng</h3>
+          <p class="portrait-bio">
+            Diễm Hằng, cô gái nhỏ xinh đến từ, Bắc Ninh.<br>
+            Cái gọi là duyên phận, chính là trong ngàn vạn người gặp được người cần gặp là anh, trong ngàn vạn năm, giữa mênh mông hoang hoải vô tận của thời gian, không sớm một bước cũng không muộn một bước.<br>
+            Hằng chia sẻ: "Mong rằng cuộc sống sau này sẽ đối xử tốt với em, để vui vẻ, hạnh phúc luôn cạnh em"
+          </p>
+          <div class="portrait-album-action">
+            <button type="button" class="outline-pill-btn" onclick="openAlbumModal('bride')">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              <span>Xem album ảnh cô dâu</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 7: BỘ SƯU TẬP ẢNH CƯỚI ================= -->
+      <section id="section-gallery" class="invitation-section section-gallery">
+        <div class="sticker-header">
+          <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/769c99a9-1d71-4301-a496-b1eea282a533.webp" alt="Decal">
+        </div>
+        <h2 class="section-title-taviraj">BỘ SƯU TẬP ẢNH CƯỚI</h2>
+
+        <!-- Masonry / Collage Gallery Grid -->
+        <div class="gallery-grid">
+          <div class="gallery-col left-col">
+            <div class="gallery-item" onclick="openLightbox(0)"><img src="images/wedding/PQD06805.jpg" alt="Wedding Photo 1" loading="lazy"></div>
+            <div class="gallery-item" onclick="openLightbox(1)"><img src="images/wedding/PQD06812.jpg" alt="Wedding Photo 2" loading="lazy"></div>
+            <div class="gallery-item" onclick="openLightbox(2)"><img src="images/wedding/PQD06817.jpg" alt="Wedding Photo 3" loading="lazy"></div>
+            <div class="gallery-item" onclick="openLightbox(3)"><img src="images/wedding/PQD06861.jpg" alt="Wedding Photo 4" loading="lazy"></div>
+            <div class="gallery-item" onclick="openLightbox(4)"><img src="images/wedding/PQD06867.jpg" alt="Wedding Photo 5" loading="lazy"></div>
+            <div class="gallery-item" onclick="openLightbox(5)"><img src="images/wedding/PQD06872.jpg" alt="Wedding Photo 6" loading="lazy"></div>
+          </div>
+          <div class="gallery-col right-col">
+            <div class="gallery-item landscape" onclick="openLightbox(6)"><img src="images/wedding/PQD06764.jpg" alt="Wedding Photo 7" loading="lazy"></div>
+            <div class="gallery-item tall" onclick="openLightbox(7)"><img src="images/wedding/PQD06879.jpg" alt="Wedding Photo 8" loading="lazy"></div>
+            <div class="gallery-item tall" onclick="openLightbox(8)"><img src="images/wedding/PQD06886.jpg" alt="Wedding Photo 9" loading="lazy"></div>
+            <div class="gallery-item landscape" onclick="openLightbox(9)"><img src="images/wedding/PQD06793.jpg" alt="Wedding Photo 10" loading="lazy"></div>
+          </div>
+        </div>
+
+        <div class="gallery-view-more">
+          <button type="button" class="btn-view-more-album" onclick="openLightbox(0)">
+            <span>XEM THÊM (31 ẢNH)</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/></svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 8: VIDEO CƯỚI ================= -->
+      <section id="section-video" class="invitation-section section-video" style="background-image: url('images/wedding/PQD06929.jpg');">
+        <div class="video-overlay">
+          <h2 class="video-title">Xem video cưới của chúng tôi!</h2>
+          <p class="video-subtitle">Gặp nhiều người ở thời điểm khác nhau cũng không huy hoàng bằng gặp đúng người đúng thời điểm.</p>
+          <div class="video-play-btn" onclick="openPopup('popup-video')" title="Phát video">
+            <div class="play-pulse-ring"></div>
+            <div class="play-icon-triangle">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="#987289"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 9: TABS LỊCH CƯỚI ================= -->
+      <section id="section-schedule-tabs" class="invitation-section section-schedule-tabs">
+        <div class="schedule-tabs-container">
+          <button type="button" class="schedule-tab-btn active" id="tab-btn-groom-sched" onclick="switchScheduleTab('groom')">
+            <div class="sched-btn-inner">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+              <span>LỊCH CƯỚI NHÀ CHÚ RỂ</span>
+            </div>
+          </button>
+          <button type="button" class="schedule-tab-btn" id="tab-btn-bride-sched" onclick="switchScheduleTab('bride')">
+            <div class="sched-btn-inner">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+              <span>LỊCH CƯỚI NHÀ CÔ DÂU</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 10: COUNTDOWN NHÀ CHÚ RỂ ================= -->
+      <section id="section-countdown-groom" class="invitation-section section-countdown">
+        <div class="calendar-decal-icon">
+          <svg viewBox="0 0 24 24" width="46" height="46" fill="#CD6363"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        
+        <!-- Interactive Month Calendar (June 2026) -->
+        <div class="full-calendar-box" id="calendar-groom">
+          <div class="cal-header">
+            <span class="cal-title">THÁNG 06 / 2026</span>
+          </div>
+          <div class="cal-weekdays">
+            <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+          </div>
+          <div class="cal-grid">
+            <span class="cal-day">1</span>
+            <span class="cal-day">2</span>
+            <span class="cal-day">3</span>
+            <span class="cal-day">4</span>
+            <span class="cal-day">5</span>
+            <span class="cal-day wedding-day heart-beat" title="Ngày cưới">
+              <span class="day-text">6</span>
+              <svg class="heart-svg" viewBox="0 0 24 24"><path fill="#CD6363" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </span>
+            <span class="cal-day">7</span>
+            <span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day">14</span>
+            <span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day">21</span>
+            <span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day">28</span>
+            <span class="cal-day">29</span><span class="cal-day">30</span>
+          </div>
+        </div>
+
+        <p class="countdown-solar-time">10:00 Thứ 7 ngày 06 thg 06, 2026</p>
+        <p class="countdown-lunar-time">(Tức ngày 02/05 năm Bính Ngọ 2026)</p>
+
+        <!-- Live Clock Countdown -->
+        <div class="countdown-timer" id="clock-groom">
+          <div class="time-block"><span class="time-val" id="g-days">00</span><span class="time-lbl">NGÀY</span></div>
+          <div class="time-colon">:</div>
+          <div class="time-block"><span class="time-val" id="g-hours">00</span><span class="time-lbl">GIỜ</span></div>
+          <div class="time-colon">:</div>
+          <div class="time-block"><span class="time-val" id="g-mins">00</span><span class="time-lbl">PHÚT</span></div>
+          <div class="time-colon">:</div>
+          <div class="time-block"><span class="time-val" id="g-secs">00</span><span class="time-lbl">GIÂY</span></div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 11: COUNTDOWN NHÀ CÔ DÂU ================= -->
+      <section id="section-countdown-bride" class="invitation-section section-countdown" style="display: none;">
+        <div class="calendar-decal-icon">
+          <svg viewBox="0 0 24 24" width="46" height="46" fill="#CD6363"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+
+        <div class="full-calendar-box" id="calendar-bride">
+          <div class="cal-header">
+            <span class="cal-title">THÁNG 06 / 2026</span>
+          </div>
+          <div class="cal-weekdays">
+            <span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>
+          </div>
+          <div class="cal-grid">
+            <span class="cal-day">1</span>
+            <span class="cal-day">2</span>
+            <span class="cal-day">3</span>
+            <span class="cal-day">4</span>
+            <span class="cal-day wedding-day heart-beat" title="Ngày cưới">
+              <span class="day-text">5</span>
+              <svg class="heart-svg" viewBox="0 0 24 24"><path fill="#CD6363" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            </span>
+            <span class="cal-day">6</span>
+            <span class="cal-day">7</span>
+            <span class="cal-day">8</span><span class="cal-day">9</span><span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day">14</span>
+            <span class="cal-day">15</span><span class="cal-day">16</span><span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day">21</span>
+            <span class="cal-day">22</span><span class="cal-day">23</span><span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day">28</span>
+            <span class="cal-day">29</span><span class="cal-day">30</span>
+          </div>
+        </div>
+
+        <p class="countdown-solar-time">10:00 Thứ 6 ngày 05 thg 06, 2026</p>
+        <p class="countdown-lunar-time">(Tức ngày 02/05 năm Bính Ngọ 2026)</p>
+
+        <!-- Live Clock Countdown -->
+        <div class="countdown-timer" id="clock-bride">
+          <div class="time-block"><span class="time-val" id="b-days">00</span><span class="time-lbl">NGÀY</span></div>
+          <div class="time-colon">:</div>
+          <div class="time-block"><span class="time-val" id="b-hours">00</span><span class="time-lbl">GIỜ</span></div>
+          <div class="time-colon">:</div>
+          <div class="time-block"><span class="time-val" id="b-mins">00</span><span class="time-lbl">PHÚT</span></div>
+          <div class="time-colon">:</div>
+          <div class="time-block"><span class="time-val" id="b-secs">00</span><span class="time-lbl">GIÂY</span></div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 12: LỜI NGỎ ================= -->
+      <section id="section-message" class="invitation-section section-message">
+        <div class="sticker-header">
+          <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/769c99a9-1d71-4301-a496-b1eea282a533.webp" alt="Decal">
+        </div>
+        <h2 class="section-title-taviraj">LỜI NGỎ</h2>
+        <div class="message-content">
+          <p>Cảm ơn bạn đã dành tình cảm cho vợ chồng mình. Chúng mình biết các bạn đều đang rất bận, bận với công việc, với cuộc sống và với cả gia đình bạn.</p>
+          <p>Nhưng thực sự sẽ rất tuyệt vời nếu như ngày Hạnh Phúc của chúng mình có thêm sự góp mặt của bạn và người thương. Vợ chồng mình rất hi vọng sẽ có mặt bạn trong ngày quan trọng này để chứng kiến và chia sẽ niềm hạnh phúc này cùng chúng mình.</p>
+          <p>Một lần nữa, chân thành cảm ơn tất cả các bạn ❤️</p>
+        </div>
+        <div class="message-couple-photo">
+          <img src="images/wedding/PQD06888.jpg" alt="Cô dâu chú rể hạnh phúc" loading="lazy">
+        </div>
+      </section>
+
+      <!-- ================= SECTION 13: GIA ĐÌNH HAI BÊN ================= -->
+      <section id="section-parents" class="invitation-section section-parents" style="background-image: url('images/wedding/PQD06917.jpg');">
+        <div class="parents-overlay">
+          <div class="parents-top-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#333333"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h2 class="parents-section-title">Chú Rể &amp; Cô Dâu</h2>
+
+          <div class="parents-two-cols">
+            <!-- NHÀ TRAI -->
+            <div class="family-col">
+              <div class="family-avatar">
+                <img src="images/wedding/PQD06734.jpg" alt="Xuân Thịnh" loading="lazy">
+              </div>
+              <h3 class="col-name">Xuân Thịnh</h3>
+              <div class="divider-line"></div>
+              <h4 class="family-side-title">NHÀ TRAI</h4>
+              <p class="parent-name">Ông: Nguyễn Xuân Dung</p>
+              <p class="parent-name">Bà: Nguyễn Thị Tuyết</p>
+              <p class="family-address">Tư gia : Xóm 9, Diễn Thái<br>Diễn Châu, Nghệ An.</p>
+            </div>
+
+            <!-- NHÀ GÁI -->
+            <div class="family-col">
+              <div class="family-avatar">
+                <img src="images/wedding/PQD06742.jpg" alt="Diễm Hằng" loading="lazy">
+              </div>
+              <h3 class="col-name">Diễm Hằng</h3>
+              <div class="divider-line"></div>
+              <h4 class="family-side-title">NHÀ GÁI</h4>
+              <p class="parent-name">Ông: Nghiêm Xuân Hợp</p>
+              <p class="parent-name">Bà: Nguyễn Thị Loan</p>
+              <p class="family-address">Tư gia : Phố Chàng, Việt Tiến<br>Việt Yên, Bắc Giang.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 14: SỰ KIỆN CƯỚI ================= -->
+      <section id="section-events" class="invitation-section section-events">
+        <div class="events-header">
+          <div class="events-top-icon">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="#787878"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+          </div>
+          <h2 class="section-title-taviraj">Sự Kiện Cưới</h2>
+          <p class="events-subtitle">Hân hạnh đón tiếp Quý khách!</p>
+        </div>
+
+        <div class="events-list">
+          <!-- Event 1: Tiệc Cưới Nhà Gái -->
+          <div class="event-card">
+            <div class="event-thumb">
+              <img src="images/wedding/PQD06986.jpg" alt="Tiệc Cưới Nhà Gái" loading="lazy">
+            </div>
+            <h3 class="event-title">Tiệc Cưới Nhà Gái</h3>
+            <div class="event-meta">
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <span>10:00 Thứ 6 ngày 05 thg 06, 2026</span>
+              </div>
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Tư gia nhà Gái: Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang</span>
+              </div>
+            </div>
+            <div class="event-btn-grid">
+              <button class="event-btn" onclick="openMapUrl('Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang')">Xem bản đồ</button>
+              <button class="event-btn" onclick="addToGoogleCalendar('Tiệc Cưới Nhà Gái - Hằng & Thịnh', '2026-06-05T10:00:00', '2026-06-05T13:00:00', 'Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang')">+ Thêm vào lịch</button>
+              <button class="event-btn event-btn-rsvp" onclick="prefillRSVP('Tiệc cưới nhà Gái')">Xác nhận tham dự</button>
+              <button class="event-btn event-btn-gift" onclick="openPopup('popup-bank')">Mừng cưới</button>
+            </div>
+          </div>
+
+          <!-- Event 2: Lễ Vu Quy -->
+          <div class="event-card">
+            <div class="event-thumb">
+              <img src="images/wedding/PQD07012.jpg" alt="Lễ Vu Quy" loading="lazy">
+            </div>
+            <h3 class="event-title">Lễ Vu Quy</h3>
+            <div class="event-meta">
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <span>12:00 Thứ 6 ngày 05 thg 06, 2026</span>
+              </div>
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Tư gia nhà Gái: Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang</span>
+              </div>
+            </div>
+            <div class="event-btn-grid">
+              <button class="event-btn" onclick="openMapUrl('Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang')">Xem bản đồ</button>
+              <button class="event-btn" onclick="addToGoogleCalendar('Lễ Vu Quy - Diễm Hằng & Xuân Thịnh', '2026-06-05T12:00:00', '2026-06-05T14:30:00', 'Phố Chàng, Việt Tiến, Việt Yên, Bắc Giang')">+ Thêm vào lịch</button>
+              <button class="event-btn event-btn-rsvp" onclick="prefillRSVP('Lễ Vu Quy')">Xác nhận tham dự</button>
+              <button class="event-btn event-btn-gift" onclick="openPopup('popup-bank')">Mừng cưới</button>
+            </div>
+          </div>
+
+          <!-- Event 3: Tiệc Cưới Nhà Trai -->
+          <div class="event-card">
+            <div class="event-thumb">
+              <img src="images/wedding/PQD07034.jpg" alt="Tiệc Cưới Nhà Trai" loading="lazy">
+            </div>
+            <h3 class="event-title">Tiệc Cưới Nhà Trai</h3>
+            <div class="event-meta">
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <span>10:00 Thứ 6 ngày 05 thg 06, 2026</span>
+              </div>
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Tư gia nhà Trai: Xóm 9, Diễn Thái, Diễn Châu, Nghệ An.</span>
+              </div>
+            </div>
+            <div class="event-btn-grid">
+              <button class="event-btn" onclick="openMapUrl('Xóm 9, Diễn Thái, Diễn Châu, Nghệ An')">Xem bản đồ</button>
+              <button class="event-btn" onclick="addToGoogleCalendar('Tiệc Cưới Nhà Trai - Thịnh & Hằng', '2026-06-05T10:00:00', '2026-06-05T13:30:00', 'Xóm 9, Diễn Thái, Diễn Châu, Nghệ An')">+ Thêm vào lịch</button>
+              <button class="event-btn event-btn-rsvp" onclick="prefillRSVP('Tiệc cưới nhà Trai')">Xác nhận tham dự</button>
+              <button class="event-btn event-btn-gift" onclick="openPopup('popup-bank')">Mừng cưới</button>
+            </div>
+          </div>
+
+          <!-- Event 4: Lễ Thành Hôn -->
+          <div class="event-card">
+            <div class="event-thumb">
+              <img src="images/wedding/PQD07040.jpg" alt="Lễ Thành Hôn" loading="lazy">
+            </div>
+            <h3 class="event-title">Lễ Thành Hôn</h3>
+            <div class="event-meta">
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <span>10:00 Thứ 6 ngày 05 thg 06, 2026</span>
+              </div>
+              <div class="meta-row">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Tư gia nhà Trai: Xóm 9, Diễn Thái, Diễn Châu, Nghệ An.</span>
+              </div>
+            </div>
+            <div class="event-btn-grid">
+              <button class="event-btn" onclick="openMapUrl('Xóm 9, Diễn Thái, Diễn Châu, Nghệ An')">Xem bản đồ</button>
+              <button class="event-btn" onclick="addToGoogleCalendar('Lễ Thành Hôn - Xuân Thịnh & Diễm Hằng', '2026-06-05T10:00:00', '2026-06-05T13:30:00', 'Xóm 9, Diễn Thái, Diễn Châu, Nghệ An')">+ Thêm vào lịch</button>
+              <button class="event-btn event-btn-rsvp" onclick="prefillRSVP('Lễ Thành Hôn')">Xác nhận tham dự</button>
+              <button class="event-btn event-btn-gift" onclick="openPopup('popup-bank')">Mừng cưới</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 15: XÁC NHẬN THAM DỰ (RSVP) ================= -->
+      <section id="section-rsvp" class="invitation-section section-rsvp" style="background-image: url('images/wedding/PQD07109.jpg');">
+        <div class="rsvp-card">
+          <div class="rsvp-avatar">
+            <img src="images/wedding/PQD07057.jpg" alt="Avatar">
+          </div>
+          <h2 class="rsvp-title">Xác Nhận Tham Dự</h2>
+          <p class="rsvp-desc">Xác nhận tham dự đám cưới của Thịnh &amp; Hằng.<br>Điều này giúp chúng tôi đón tiếp các bạn chu đáo và đầy đủ hơn. Xin cảm ơn !!!</p>
+
+          <form id="rsvp-form" class="rsvp-form" onsubmit="handleRSVPSubmit(event)">
+            <div class="form-row">
+              <input type="text" id="rsvp-name" class="form-input" placeholder="Họ và tên *" required>
+            </div>
+            <div class="form-row">
+              <input type="email" id="rsvp-email" class="form-input" placeholder="Email">
+            </div>
+            <div class="form-row">
+              <select id="rsvp-attendance" class="form-select" required>
+                <option value="Có, tôi sẽ tham dự">Có, tôi sẽ tham dự</option>
+                <option value="Xin lỗi, tôi bận mất rồi">Xin lỗi, tôi bận mất rồi</option>
+              </select>
+            </div>
+            <div class="form-row-2cols">
+              <select id="rsvp-guest-of" class="form-select">
+                <option value="Chú Rể &amp; Cô Dâu">Khách mời của cả hai</option>
+                <option value="Chú Rể">Khách mời Chú Rể</option>
+                <option value="Cô Dâu">Khách mời Cô Dâu</option>
+              </select>
+              <select id="rsvp-guest-count" class="form-select">
+                <option value="1">Đi 1 mình</option>
+                <option value="2">Đi 2 người (+1 người)</option>
+                <option value="3">Đi 3 người</option>
+                <option value="4+">Cả gia đình (4+ người)</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <select id="rsvp-event-target" class="form-select">
+                <option value="Tất cả Sự kiện nhà Trai">Tất cả Sự kiện nhà Trai</option>
+                <option value="Tất cả Sự kiện nhà Gái">Tất cả Sự kiện nhà Gái</option>
+                <option value="Tiệc cưới nhà Trai">Tiệc cưới nhà Trai</option>
+                <option value="Tiệc cưới nhà Gái">Tiệc cưới nhà Gái</option>
+                <option value="Lễ Thành Hôn">Lễ Thành Hôn</option>
+                <option value="Lễ Vu Quy">Lễ Vu Quy</option>
+              </select>
+            </div>
+            <button type="submit" class="rsvp-submit-btn">Xác nhận</button>
+          </form>
+
+          <div class="rsvp-bottom-nav">
+            <a href="javascript:void(0)" onclick="scrollToSection('section-hero')" class="rsvp-nav-link">&lt;&lt; Xem lại thiệp mời</a>
+            <a href="javascript:void(0)" onclick="openPopup('popup-bank')" class="rsvp-nav-link">Mừng cưới &gt;&gt;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 16: HỘP MỪNG CƯỚI BANNER ================= -->
+      <section id="section-gift" class="invitation-section section-gift" style="background-image: url('images/wedding/PQD07117.jpg');">
+        <div class="gift-banner-overlay">
+          <h2 class="gift-banner-title">Hộp mừng cưới</h2>
+          <p class="gift-banner-subtitle">Vợ chồng xin cảm ơn tất cả tình cảm của mọi người ạ ♥</p>
+          <div class="gift-box-btn" onclick="openPopup('popup-bank')" title="Mở hộp mừng cưới">
+            <div class="gift-box-icon">
+              <svg viewBox="0 0 100 100" width="70" height="70" fill="#ffffff">
+                <path d="m61.05,8c-4.31,0-8.21,1.74-11.05,4.55-2.84-2.81-6.74-4.55-11.05-4.55-8.67,0-15.71,5.82-15.71,15.71,0,13.96,26.76,31.41,26.76,31.41,0,0,26.76-15.12,26.76-31.41,0-8.43-7.03-15.71-15.71-15.71Zm-11.05,22.13c.12,0,.23.02.33.04,3.16.18,5.68,2.79,5.68,6,0,2.8-1.92,5.15-4.52,5.82v2.77c0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5v-2.77c-2.59-.67-4.52-3.02-4.52-5.82,0-.83.67-1.5,1.5-1.5s1.5.67,1.5,1.5c0,1.66,1.35,3.01,3.02,3.01s3.02-1.35,3.02-3.01-1.35-3.02-3.02-3.02c-.12,0-.23-.02-.33-.04-3.16-.18-5.68-2.79-5.68-6,0-2.8,1.92-5.15,4.52-5.82v-2.71c0-.83.67-1.5,1.5-1.5s1.5.67,1.5,1.5v2.71c2.59.67,4.52,3.02,4.52,5.82,0,.83-.67,1.5-1.5,1.5s-1.5-.67-1.5-1.5c0-1.66-1.35-3.02-3.02-3.02s-3.02,1.35-3.02,3.02,1.35,3.01,3.02,3.01Z"/>
+                <path d="m87.72,66.64l-.26-.24c-.85-.76-2.05-1.03-3.14-.71l-15.68,6.89c-.03-.12-.04-.25-.08-.36-.33-.91-1.08-1.61-1.99-1.86l-17.08-5.13c-2.39-.72-4.92-.75-7.32-.1l-15.14,4.12-3.3-.05.02-1.29c.01-.97-.65-1.81-1.59-2.02l-8.8-1.99c-1.09-.25-2.13.57-2.14,1.69l-.28,20.48c-.02,1.1.97,1.94,2.06,1.75l8.84-1.55c.97-.17,1.68-1,1.69-1.99h0s1.96-.03,1.96-.03l33.09,4.38c.67.09,1.34.13,2,.13,3.13,0,6.19-.97,8.77-2.8l18.26-12.95.14-.11c.88-.8,1.39-1.94,1.39-3.13s-.51-2.33-1.4-3.13Z"/>
+              </svg>
+            </div>
+            <span class="gift-box-text">Mừng Cưới</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 17: SỔ LƯU BÚT ================= -->
+      <section id="section-guestbook" class="invitation-section section-guestbook">
+        <div class="card-box guestbook-card">
+          <div class="guestbook-header-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#987289"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h2 class="guestbook-title">Sổ Lưu Bút</h2>
+          <p class="guestbook-subtitle">Cảm ơn mọi người rất nhiều vì đã gửi những lời chúc mừng tốt đẹp nhất đến đám cưới của hai vợ chồng ạ ♥</p>
+
+          <!-- Suggested Wishes Chips -->
+          <div class="wish-chips-container">
+            <div class="chips-label">Gợi ý lời chúc:</div>
+            <div class="chips-list">
+              <button type="button" class="wish-chip" onclick="applyWishChip(this)">Chúc mừng hạnh phúc hai bạn! Trăm năm hạnh phúc, đầu bạc răng long 🎉</button>
+              <button type="button" class="wish-chip" onclick="applyWishChip(this)">Chúc hai bạn một đời an yên, luôn yêu thương nhau như ngày đầu tiên 🥰</button>
+              <button type="button" class="wish-chip" onclick="applyWishChip(this)">Chúc mừng chú rể đẹp trai và cô dâu xinh gái! Sớm có thiên thần nhỏ nhé 👩‍❤️‍👨</button>
+            </div>
+          </div>
+
+          <!-- Wish Submission Form -->
+          <form id="wish-form" class="wish-form" onsubmit="handleWishSubmit(event)">
+            <input type="text" id="wish-name" class="form-input" placeholder="Họ và tên của bạn *" required>
+            <textarea id="wish-message" class="form-textarea" placeholder="Nhập lời chúc phúc của bạn gửi đến cô dâu & chú rể... *" rows="3" required></textarea>
+            <button type="submit" class="wish-submit-btn">Gửi lời chúc</button>
+          </form>
+
+          <!-- Wishes Display Feed -->
+          <div class="wishes-feed-wrapper">
+            <h3 class="wishes-feed-heading">Lời chúc phúc từ người thương (<span id="wishes-count">4</span>)</h3>
+            <div class="wishes-feed-list" id="wishes-feed-list">
+              <!-- Dynamically populated / mock wishes -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 18: THANK YOU ================= -->
+      <section id="section-thankyou" class="invitation-section section-thankyou" style="background-image: url('images/wedding/PQD07139.jpg');">
+        <div class="thankyou-overlay">
+          <h2 class="thankyou-heading">Thank You</h2>
+          <div class="thankyou-couple-names">
+            <span class="t-groom">- Xuân Thịnh</span>
+            <span class="t-amp">&amp;</span>
+            <span class="t-bride">Diễm Hằng -</span>
+          </div>
+          <div class="thankyou-icon">
+            <svg viewBox="0 0 24 24" width="36" height="36" fill="#ffffff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <p class="copyright-text">Thiết kế bởi meHappy • Gói VIP</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ================= POPUP 1: HỘP MỪNG CƯỚI (SECTION 19) ================= -->
+  <div id="popup-bank" class="modal-overlay">
+    <div class="modal-card bank-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closePopup('popup-bank')" aria-label="Đóng">&times;</button>
+      <h2 class="bank-modal-title">Hộp mừng cưới</h2>
+      <p class="bank-modal-subtitle">Vợ chồng xin cảm ơn tất cả tình cảm của mọi người ạ ♥</p>
+
+      <div class="bank-cards-grid">
+        <!-- Chú Rể -->
+        <div class="bank-card-item">
+          <h3 class="bank-card-header">MỪNG CƯỚI ĐẾN<br>CHÚ RỂ</h3>
+          <div class="qr-image-wrapper">
+            <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/c5fb8762-18cf-4bf1-97cb-483930f0c75b.webp" alt="QR Chú Rể" id="qr-img-groom">
+          </div>
+          <p class="account-name">Nguyễn Xuân Thịnh</p>
+          <p class="account-number" id="stk-groom">0989000999999</p>
+          <p class="bank-brand">Ngân Hàng MB Bank</p>
+          <div class="bank-card-actions">
+            <button type="button" class="btn-bank-action" onclick="downloadQR('https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/c5fb8762-18cf-4bf1-97cb-483930f0c75b.webp', 'QR-ChuRe-NguyenXuanThinh.webp')">Tải ảnh QR</button>
+            <button type="button" class="btn-bank-action" onclick="copyToClipboard('0989000999999', 'Đã copy số tài khoản Chú Rể!')">Copy STK</button>
+          </div>
+          <a href="https://zalo.me" target="_blank" rel="noopener" class="bank-chat-link">&gt;&gt; Gửi ảnh mừng cưới cho chú rể</a>
+        </div>
+
+        <!-- Cô Dâu -->
+        <div class="bank-card-item">
+          <h3 class="bank-card-header">MỪNG CƯỚI ĐẾN<br>CÔ DÂU</h3>
+          <div class="qr-image-wrapper">
+            <img src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/c5fb8762-18cf-4bf1-97cb-483930f0c75b.webp" alt="QR Cô Dâu" id="qr-img-bride">
+          </div>
+          <p class="account-name">Nghiêm Thị Hằng</p>
+          <p class="account-number" id="stk-bride">66688899999999</p>
+          <p class="bank-brand">Ngân Hàng Techcombank</p>
+          <div class="bank-card-actions">
+            <button type="button" class="btn-bank-action" onclick="downloadQR('https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/admin/assets/c5fb8762-18cf-4bf1-97cb-483930f0c75b.webp', 'QR-CoDau-NghiemThiHang.webp')">Tải ảnh QR</button>
+            <button type="button" class="btn-bank-action" onclick="copyToClipboard('66688899999999', 'Đã copy số tài khoản Cô Dâu!')">Copy STK</button>
+          </div>
+          <a href="https://zalo.me" target="_blank" rel="noopener" class="bank-chat-link">&gt;&gt; Gửi ảnh mừng cưới cho cô dâu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= POPUP 2: VIDEO CƯỚI (SECTION 20) ================= -->
+  <div id="popup-video" class="modal-overlay">
+    <div class="modal-card video-modal-card">
+      <button type="button" class="modal-close-btn" onclick="closePopup('popup-video')" aria-label="Đóng">&times;</button>
+      <h2 class="video-modal-title">Video cưới</h2>
+      <p class="video-modal-subtitle">Chúng tôi luôn có những kỷ niệm tuyệt vời cùng nhau, dù ở bất cứ đâu, hay là bất cứ khi nào ♥️</p>
+      <div class="video-iframe-container">
+        <iframe id="wedding-video-iframe" src="" title="Video cưới Xuân Thịnh & Diễm Hằng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= POPUP 3: ALBUM LIGHTBOX (SECTIONS 22, 24, 25) ================= -->
+  <div id="lightbox-modal" class="lightbox-overlay">
+    <button type="button" class="lightbox-close" onclick="closeLightbox()" aria-label="Đóng">&times;</button>
+    <div class="lightbox-content">
+      <button type="button" class="lightbox-nav-btn prev-btn" onclick="changeLightboxImage(-1)" aria-label="Ảnh trước">&#10094;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-active-img" src="" alt="Album photo">
+        <div class="lightbox-counter"><span id="lightbox-current-idx">1</span> / <span id="lightbox-total-idx">20</span></div>
+      </div>
+      <button type="button" class="lightbox-nav-btn next-btn" onclick="changeLightboxImage(1)" aria-label="Ảnh sau">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- ================= TOAST NOTIFICATION CONTAINER ================= -->
+  <div id="toast-message" class="toast-message"></div>
+
+  <!-- ================= SECTION 21: FLOATING POPUP PROMPT ================= -->
+  <div id="floating-rsvp-prompt" class="floating-rsvp-prompt">
+    <span class="prompt-text">Bạn sẽ tham gia chứ ?</span>
+    <button type="button" class="prompt-btn" onclick="scrollToSection('section-rsvp')">Xác nhận tham dự</button>
+    <button type="button" class="prompt-close" onclick="dismissPrompt()">&times;</button>
+  </div>
+
+  <!-- ================= SECTION 23: QUICK ACTIONS FLOATING DOCK ================= -->
+  <nav class="quick-actions-dock" id="quick-actions-dock">
+    <div class="dock-buttons">
+      <button type="button" class="dock-btn" onclick="toggleAudio()" id="dock-music-btn" title="Âm nhạc">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+        <span class="dock-label">Âm nhạc</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="scrollToSection('section-events')" title="Sự kiện">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+        <span class="dock-label">Sự kiện</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="openPopup('popup-bank')" title="Mừng cưới">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 6h-2.18c.11-.31.18-.65.18-1 0-1.66-1.34-3-3-3-1.05 0-1.96.54-2.5 1.35l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z"/></svg>
+        <span class="dock-label">Mừng cưới</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="scrollToSection('section-guestbook')" title="Chúc phúc">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+        <span class="dock-label">Lời chúc</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="scrollToSection('section-rsvp')" title="RSVP">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+        <span class="dock-label">Tham dự</span>
+      </button>
+      <button type="button" class="dock-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Lên đầu trang">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+        <span class="dock-label">Lên đầu</span>
+      </button>
+    </div>
+  </nav>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

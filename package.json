@@ -1,0 +1,17 @@
+{
+  "name": "thiepcuoi-bustle-vip",
+  "version": "1.0.0",
+  "description": "Giao diện thiệp cưới Bustle - Gói VIP meHappy",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "thiep-cuoi"
+  ],
+  "author": "",
+  "license": "ISC"
+}
