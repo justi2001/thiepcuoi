@@ -1,7 +1,12 @@
 node_modules/
 *.log
 test_thumb.jpg
+test_tab_bg.webp
 detailed_summary*.txt
 drive_dump.json
 .DS_Store
 Thumbs.db
+chrome_tmp/
+scratch/
+download_max_photos.js
+

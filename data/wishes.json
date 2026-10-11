@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1791738618504,
+    "name": "đs",
+    "message": "Chúc mừng hạnh phúc hai bạn! Trăm năm hạnh phúc, đầu bạc răng long 🎉",
+    "time": "Vừa xong",
+    "createdAt": "2026-10-11T17:10:18.504Z",
+    "likes": 0
+  },
+  {
+    "id": 1791737848369,
+    "name": "cxc",
+    "message": "Chúc mừng hạnh phúc hai bạn! Trăm năm hạnh phúc, đầu bạc răng long 🎉",
+    "time": "Vừa xong",
+    "createdAt": "2026-10-11T16:57:28.369Z",
+    "likes": 0
+  },
+  {
+    "id": 1,
+    "name": "Nguyễn Hoàng Long",
+    "message": "Chúc mừng hạnh phúc hai bạn! Trăm năm hạnh phúc, đầu bạc răng long và luôn rạng ngời nụ cười như ngày hôm nay nhé 🎉",
+    "time": "2 ngày trước",
+    "createdAt": "2026-10-09T14:30:00.000Z",
+    "likes": 12
+  },
+  {
+    "id": 2,
+    "name": "Trần Phương Thảo",
+    "message": "Chúc hai bạn một đời an yên, luôn yêu thương, nhường nhịn và đồng hành cùng nhau trên mọi nẻo đường đời 🥰",
+    "time": "3 ngày trước",
+    "createdAt": "2026-10-08T10:15:00.000Z",
+    "likes": 9
+  },
+  {
+    "id": 3,
+    "name": "Lê Quang Huy",
+    "message": "Chúc mừng chú rể đẹp trai nhất năm và cô dâu xinh đẹp! Sớm cho anh em ăn cỗ đầy tháng nhé 👨‍👩‍👧",
+    "time": "5 ngày trước",
+    "createdAt": "2026-10-06T18:40:00.000Z",
+    "likes": 15
+  },
+  {
+    "id": 4,
+    "name": "Đỗ Thanh Hằng",
+    "message": "Mừng ngày chung đôi của hai người bạn thân thiết! Chúc tổ ấm nhỏ luôn tràn ngập tiếng cười và hạnh phúc viên mãn ❤️",
+    "time": "1 tuần trước",
+    "createdAt": "2026-10-04T09:20:00.000Z",
+    "likes": 8
+  }
+]
