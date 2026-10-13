@@ -644,8 +644,10 @@ async function handleWishSubmit(e) {
 }
 
 // ==========================================
-// 11. RSVP FORM SUBMISSION & ADMIN
+// 11. RSVP FORM SUBMISSION & GOOGLE SHEETS SYNC
 // ==========================================
+const GOOGLE_SCRIPT_RSVP_URL = 'https://script.google.com/macros/s/AKfycby0z5wKKcfiDLKidcTkVPO3SfBs074Gd_4SbZ_iksVAoYL91guZvahi3CrbojhednhCfg/exec';
+
 function handleAttendanceChange(val) {
   const detailsRow = document.getElementById('rsvp-details-row');
   const eventRow = document.getElementById('rsvp-event-row');
@@ -691,16 +693,41 @@ async function handleRSVPSubmit(e) {
 
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Đang lưu...';
+    submitBtn.textContent = 'Đang gửi...';
   }
 
   const rsvpData = {
     id: Date.now(),
     name, email, attendance, guestOf, guestCount, eventTarget,
-    submittedAt: new Date().toISOString()
+    submittedAt: new Date().toLocaleString('vi-VN'),
+    // Aliases to match Google Apps Script variables
+    guest_of: guestOf,
+    guest: guestOf,
+    phanLoaiKhach: guestOf,
+    phanLoai: guestOf,
+    guest_count: guestCount,
+    count: guestCount,
+    soLuong: guestCount,
+    people: guestCount,
+    event_target: eventTarget,
+    event: eventTarget,
+    suKienThamGia: eventTarget,
+    suKien: eventTarget
   };
 
-  // 1. Send to server API if available (works on Node.js product server)
+  // 1. Send directly to Google Sheets (Google Apps Script Web App)
+  try {
+    await fetch(GOOGLE_SCRIPT_RSVP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(rsvpData)
+    });
+  } catch (err) {
+    console.warn('Google Sheets sync notice:', err);
+  }
+
+  // 2. Send to server API if available (Node.js server)
   try {
     const res = await fetch('/api/rsvp', {
       method: 'POST',
@@ -711,9 +738,7 @@ async function handleRSVPSubmit(e) {
       const data = await res.json();
       if (data.total) updateRSVPCount(data.total);
     }
-  } catch (err) {
-    console.warn('API rsvp error (using local storage fallback for static hosting):', err);
-  }
+  } catch (err) {}
 
   // 2. Always persist to localStorage (works on static hosting, Vercel, Netlify, GitHub Pages)
   try {
@@ -734,8 +759,9 @@ async function handleRSVPSubmit(e) {
   // 5. Open celebratory modal popup
   openRSVPSuccessModal(rsvpData);
 
-  // 6. Show friendly notification toast
+  // 6. Show friendly notification toast & reset form
   showToast('Xác nhận tham dự thành công! Cảm ơn bạn ❤️');
+  document.getElementById('rsvp-form')?.reset();
 
   if (submitBtn) {
     submitBtn.disabled = false;
