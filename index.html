@@ -19,9 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Judson:wght@400;700&family=Mulish:wght@400;600;700&family=Open+Sans:wght@400;600&family=Philosopher:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&family=Taviraj:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="./css/style.css?v=1.2">
+  <link rel="stylesheet" href="./css/style.css?v=bustle_vip_restored_v1">
 </head>
-<body>
+<body class="envelope-locked">
 
   <!-- Audio Element (Lazy Preload) -->
   <audio id="wedding-audio" loop preload="none">
@@ -30,21 +30,23 @@
 
   <!-- Envelope Opening Effect Doors -->
   <div id="envelope-overlay" class="envelope-overlay">
-    <div class="envelope-panel left-panel">
-      <img src="./images/left-thiep.webp" alt="Left door">
-    </div>
-    <div class="envelope-panel right-panel">
-      <img src="./images/right-thiep.webp" alt="Right door">
-    </div>
-    <div class="envelope-center-btn" id="open-envelope-btn">
-      <div class="envelope-seal">
-        <div class="seal-icon">
-          <svg viewBox="0 0 24 24" width="34" height="34" fill="#ffffff">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
+    <div class="envelope-wrapper">
+      <div class="envelope-panel left-panel">
+        <img src="./images/left-thiep.webp" alt="Left door">
+      </div>
+      <div class="envelope-panel right-panel">
+        <img src="./images/right-thiep.webp" alt="Right door">
+      </div>
+      <div class="envelope-center-btn" id="open-envelope-btn" role="button" aria-label="Mở thiệp cưới">
+        <div class="envelope-seal">
+          <div class="seal-icon">
+            <svg viewBox="0 0 24 24" width="34" height="34" fill="#ffffff">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </div>
+          <span class="seal-text">MỞ THIỆP CƯỚI</span>
+          <span class="seal-hint">Chạm để mở thiệp &amp; bật nhạc</span>
         </div>
-        <span class="seal-text">MỞ THIỆP CƯỚI</span>
-        <span class="seal-hint">Chạm để mở thiệp &amp; bật nhạc</span>
       </div>
     </div>
   </div>
@@ -130,8 +132,7 @@
       <!-- ================= SECTION 3: TRÂN TRỌNG KÍNH MỜI / SAVE THE DATE ================= -->
       <section id="section-invitation" class="invitation-section section-invitation">
         <div class="card-box invitation-card">
-          <h2 class="invite-header-top">TRÂN TRỌNG KÍNH MỜI</h2>
-          <p class="invite-guest-label" id="invite-guest-label">Bạn và người thương</p>
+          <span id="invite-guest-label" style="display:none;"></span>
 
           <div class="calendar-preview-strip">
             <div class="calendar-month-label">THÁNG 11 / 2026</div>
@@ -165,15 +166,15 @@
 
           <p class="invite-datetime">15:30 Thứ 6 ngày 13 tháng 11, 2026</p>
           <p class="invite-location-label">Tư gia nhà Trai</p>
-          <p class="invite-location-address">Đội 7, thôn Muôn Ro, xã Kiều Phú, Thành phố Hà Nội<br><small style="color: #888; font-size: 13px;">(địa chỉ cũ: Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội)</small></p>
+          <p class="invite-location-address">7 Trại Ro, Kiều Phú, Hà Nội<br><small style="color: #888; font-size: 13px;">(địa chỉ cũ: Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội)</small></p>
 
           <p class="invite-quote">Sự hiện diện của Quý khách là niềm vinh hạnh cho gia đình chúng tôi!</p>
 
           <div class="invite-circle-actions">
-            <button class="circle-btn" onclick="addToGoogleCalendar('Lễ Cưới Phú Cường & Thuỳ Linh', '2026-11-13T15:30:00', '2026-11-13T19:00:00', 'Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội')" title="Thêm vào lịch">
+            <button class="circle-btn" onclick="addToGoogleCalendar('Lễ Cưới Phú Cường & Thuỳ Linh', '2026-11-13T15:30:00', '2026-11-13T19:00:00', '7 Trại Ro, Kiều Phú, Hà Nội')" title="Thêm vào lịch">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="#ffffff"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
             </button>
-            <button class="circle-btn" onclick="openMapUrl('Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội')" title="Chỉ đường Google Maps">
+            <button class="circle-btn" onclick="openMapUrl('https://maps.app.goo.gl/7ds3C6CdtQptPjB18')" title="Chỉ đường Google Maps">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="#ffffff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </button>
             <button class="circle-btn" onclick="shareInvitation()" title="Chia sẻ thiệp">
@@ -321,7 +322,7 @@
       </section>
 
       <!-- ================= SECTION 8: VIDEO CƯỚI ================= -->
-      <section id="section-video" class="invitation-section section-video" style="background-image: url('images/wedding/PQD06929.jpg');">
+      <section id="section-video" class="invitation-section section-video" style="display: none;">
         <div class="video-overlay">
           <h2 class="video-title">Xem video cưới của chúng tôi!</h2>
           <p class="video-subtitle">Gặp nhiều người ở thời điểm khác nhau cũng không huy hoàng bằng gặp đúng người đúng thời điểm.</p>
@@ -533,7 +534,7 @@
               <h4 class="family-side-title">NHÀ TRAI</h4>
               <p class="parent-name">Ông: Nguyễn Văn Yến</p>
               <p class="parent-name">Bà: Nguyễn Thị Lý</p>
-              <p class="family-address">Tư gia : Đội 7, thôn Muôn Ro<br>xã Kiều Phú, TP. Hà Nội</p>
+              <p class="family-address">Tư gia : 7 Trại Ro, Kiều Phú<br>Hà Nội</p>
             </div>
 
             <!-- NHÀ GÁI -->
@@ -576,12 +577,12 @@
               </div>
               <div class="meta-row">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                <span>Tư gia nhà Trai: Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội</span>
+                <span>Tư gia nhà Trai: 7 Trại Ro, Kiều Phú, Hà Nội<br><small style="color: #888; font-size: 13px;">(địa chỉ cũ: Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội)</small></span>
               </div>
             </div>
             <div class="event-btn-grid">
-              <button class="event-btn" onclick="openMapUrl('Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội')">Xem bản đồ</button>
-              <button class="event-btn" onclick="addToGoogleCalendar('Tiệc Cưới Nhà Trai - Phú Cường &amp; Thuỳ Linh', '2026-11-13T15:30:00', '2026-11-13T19:30:00', 'Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội')">+ Thêm vào lịch</button>
+              <button class="event-btn" onclick="openMapUrl('https://maps.app.goo.gl/7ds3C6CdtQptPjB18')">Xem bản đồ</button>
+              <button class="event-btn" onclick="addToGoogleCalendar('Tiệc Cưới Nhà Trai - Phú Cường &amp; Thuỳ Linh', '2026-11-13T15:30:00', '2026-11-13T19:30:00', '7 Trại Ro, Kiều Phú, Hà Nội')">+ Thêm vào lịch</button>
               <button class="event-btn event-btn-rsvp" onclick="prefillRSVP('Tiệc cưới nhà Tra')">Xác nhận tham dự</button>
               <button class="event-btn event-btn-gift" onclick="openPopup('popup-bank')">Mừng cưới</button>
             </div>
@@ -624,12 +625,12 @@
               </div>
               <div class="meta-row">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="#EFCB84"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                <span>Tư gia nhà Trai: Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội</span>
+                <span>Tư gia nhà Trai: 7 Trại Ro, Kiều Phú, Hà Nội<br><small style="color: #888; font-size: 13px;">(địa chỉ cũ: Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội)</small></span>
               </div>
             </div>
             <div class="event-btn-grid">
-              <button class="event-btn" onclick="openMapUrl('Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội')">Xem bản đồ</button>
-              <button class="event-btn" onclick="addToGoogleCalendar('Lễ Thành Hôn - Phú Cường &amp; Thuỳ Linh', '2026-11-14T11:00:00', '2026-11-14T14:00:00', 'Đội 7, thôn Ro, xã Tuyết Nghĩa, Quốc Oai, Hà Nội')">+ Thêm vào lịch</button>
+              <button class="event-btn" onclick="openMapUrl('https://maps.app.goo.gl/7ds3C6CdtQptPjB18')">Xem bản đồ</button>
+              <button class="event-btn" onclick="addToGoogleCalendar('Lễ Thành Hôn - Phú Cường &amp; Thuỳ Linh', '2026-11-14T11:00:00', '2026-11-14T14:00:00', '7 Trại Ro, Kiều Phú, Hà Nội')">+ Thêm vào lịch</button>
               <button class="event-btn event-btn-rsvp" onclick="prefillRSVP('Lễ Thành Hôn')">Xác nhận tham dự</button>
               <button class="event-btn event-btn-gift" onclick="openPopup('popup-bank')">Mừng cưới</button>
             </div>
@@ -776,8 +777,8 @@
             <button type="submit" class="wish-submit-btn" id="wish-submit-btn">Gửi lời chúc</button>
           </form>
 
-          <!-- Wishes Display Feed -->
-          <div class="wishes-feed-wrapper">
+          <!-- Wishes Display Feed (Ẩn theo yêu cầu) -->
+          <div class="wishes-feed-wrapper" style="display: none;">
             <div class="wishes-feed-header-row">
               <h3 class="wishes-feed-heading">Lời chúc phúc từ người thương (<span id="wishes-count">0</span>)</h3>
               <button type="button" class="btn-refresh-wishes" onclick="loadWishes()" title="Làm mới danh sách lời chúc">
@@ -886,7 +887,7 @@
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
           <span>Thêm vào lịch Google</span>
         </button>
-        <button type="button" class="btn-success-action btn-wish" onclick="closePopup('popup-rsvp-success'); scrollToSection('section-guestbook');">
+        <button type="button" class="btn-success-action btn-wish" onclick="closePopup('popup-rsvp-success'); scrollToSection('section-guestbook'); setTimeout(() => { const el = document.getElementById('wish-message'); if (el) el.focus(); }, 400);">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
           <span>Gửi lời chúc phúc</span>
         </button>

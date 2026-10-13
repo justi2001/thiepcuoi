@@ -117,16 +117,48 @@ if (audioToggleBtn) {
   audioToggleBtn.addEventListener('click', toggleAudio);
 }
 
-// Envelope Opening
+// ==========================================
+// 2. ENVELOPE OPENING & SMOOTH SCROLL UNLOCK
+// ==========================================
+function openWeddingEnvelope() {
+  const overlay = document.getElementById('envelope-overlay');
+  if (!overlay || overlay.classList.contains('opened')) return;
+
+  // 1. Play background music
+  playAudio();
+
+  // 2. Add opened class for smooth double-door opening
+  overlay.classList.add('opened');
+
+  // 3. Unlock scroll after doors begin parting (450ms)
+  setTimeout(() => {
+    document.body.classList.remove('envelope-locked');
+    document.documentElement.classList.remove('envelope-locked');
+    
+    // Smooth scroll to top of invitation
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, 450);
+
+  // 4. Hide overlay completely after animation finishes
+  setTimeout(() => {
+    overlay.style.display = 'none';
+  }, 1300);
+}
+
+// Bind center seal button and overlay click
 if (openEnvelopeBtn) {
-  openEnvelopeBtn.addEventListener('click', () => {
-    playAudio();
-    if (envelopeOverlay) {
-      envelopeOverlay.classList.add('opened');
-      setTimeout(() => {
-        envelopeOverlay.style.display = 'none';
-      }, 1200);
-    }
+  openEnvelopeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openWeddingEnvelope();
+  });
+}
+
+if (envelopeOverlay) {
+  envelopeOverlay.addEventListener('click', () => {
+    openWeddingEnvelope();
   });
 }
 
@@ -421,6 +453,10 @@ function addToGoogleCalendar(title, startIso, endIso, location) {
 }
 
 function openMapUrl(location) {
+  if (typeof location === 'string' && (location.startsWith('http://') || location.startsWith('https://'))) {
+    window.open(location, '_blank');
+    return;
+  }
   const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
   window.open(url, '_blank');
 }
@@ -584,19 +620,98 @@ async function handleWishSubmit(e) {
   const msgInput = document.getElementById('wish-message');
   const submitBtn = document.getElementById('wish-submit-btn');
 
-  const name = nameInput.value.trim();
-  const message = msgInput.value.trim();
+  const name = nameInput ? nameInput.value.trim() : '';
+  const message = msgInput ? msgInput.value.trim() : '';
 
   if (!name || !message) {
     showToast('Vui lòng nhập đầy đủ họ tên và lời chúc!');
     return;
   }
 
+  // Lưu tên vào bộ nhớ
+  localStorage.setItem('wedding_guest_name', name);
+
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Đang gửi...';
   }
 
+  // Lấy thông tin RSVP đã gửi gần nhất (nếu có)
+  let lastRsvp = {};
+  try {
+    lastRsvp = JSON.parse(localStorage.getItem('wedding_last_rsvp') || '{}');
+  } catch (err) {}
+
+  const now = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  const timeFormatted = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+
+  // Payload đồng bộ về Google Sheets theo đúng các cột trong bảng:
+  // A: Thời gian | B: Họ và tên | C: Trạng thái tham dự | D: Phân loại khách | E: Số lượng | F: Sự kiện tham gia | G: lời chúc phúc
+  const googleSheetWishPayload = {
+    // Cột A: Thời gian
+    "Thời gian": timeFormatted,
+    time: timeFormatted,
+    date: timeFormatted,
+    submittedAt: timeFormatted,
+
+    // Cột B: Họ và tên
+    "Họ và tên": name,
+    name: name,
+    hoVaTen: name,
+    fullName: name,
+
+    // Cột C: Trạng thái tham dự
+    "Trạng thái tham dự": lastRsvp.attendance || 'Có, tôi sẽ tham dự',
+    attendance: lastRsvp.attendance || 'Có, tôi sẽ tham dự',
+    trangThaiThamDu: lastRsvp.attendance || 'Có, tôi sẽ tham dự',
+
+    // Cột D: Phân loại khách
+    "Phân loại khách": lastRsvp.guestOf || 'Khách mời của cả hai',
+    guestOf: lastRsvp.guestOf || 'Khách mời của cả hai',
+    guest_of: lastRsvp.guestOf || 'Khách mời của cả hai',
+    phanLoaiKhach: lastRsvp.guestOf || 'Khách mời của cả hai',
+    phanLoai: lastRsvp.guestOf || 'Khách mời của cả hai',
+
+    // Cột E: Số lượng
+    "Số lượng": lastRsvp.guestCount || '1',
+    guestCount: lastRsvp.guestCount || '1',
+    guest_count: lastRsvp.guestCount || '1',
+    soLuong: lastRsvp.guestCount || '1',
+    count: lastRsvp.guestCount || '1',
+
+    // Cột F: Sự kiện tham gia
+    "Sự kiện tham gia": lastRsvp.eventTarget || 'Tất cả Sự kiện nhà Trai',
+    eventTarget: lastRsvp.eventTarget || 'Tất cả Sự kiện nhà Trai',
+    event_target: lastRsvp.eventTarget || 'Tất cả Sự kiện nhà Trai',
+    suKienThamGia: lastRsvp.eventTarget || 'Tất cả Sự kiện nhà Trai',
+    suKien: lastRsvp.eventTarget || 'Tất cả Sự kiện nhà Trai',
+
+    // Cột G: lời chúc phúc
+    "lời chúc phúc": message,
+    "loi chuc phuc": message,
+    loiChucPhuc: message,
+    loiChuc: message,
+    loi_chuc: message,
+    loi_chuc_phuc: message,
+    message: message,
+    wish: message,
+    content: message
+  };
+
+  // 1. Gửi trực tiếp về Google Sheets (Google Apps Script Web App)
+  try {
+    await fetch(GOOGLE_SCRIPT_RSVP_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(googleSheetWishPayload)
+    });
+  } catch (err) {
+    console.warn('Google Sheets sync notice:', err);
+  }
+
+  // 2. Gửi đến server API nội bộ (nếu có)
   const newWish = {
     id: Date.now(),
     name: name,
@@ -623,7 +738,7 @@ async function handleWishSubmit(e) {
     console.warn('API error, saving locally:', err);
   }
 
-  // Prepend & save
+  // Lưu cục bộ
   wishesList.unshift(newWish);
   const likedMap = JSON.parse(localStorage.getItem('wedding_liked_wishes') || '{}');
   likedMap[newWish.id] = true;
@@ -631,7 +746,7 @@ async function handleWishSubmit(e) {
   localStorage.setItem('wedding_bustle_wishes', JSON.stringify(wishesList));
   renderWishes();
 
-  nameInput.value = '';
+  // Giữ nguyên tên người dùng, chỉ xóa nội dung lời chúc đã gửi
   msgInput.value = '';
   document.querySelectorAll('.wish-chip').forEach(b => b.classList.remove('active'));
 
@@ -691,16 +806,37 @@ async function handleRSVPSubmit(e) {
     return;
   }
 
+  // Tự động lưu tên và hiển thị ngay ở form Sổ lưu bút
+  localStorage.setItem('wedding_guest_name', name);
+  const wishNameInput = document.getElementById('wish-name');
+  if (wishNameInput) {
+    wishNameInput.value = name;
+  }
+
   if (submitBtn) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Đang gửi...';
   }
 
+  const now = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  const timeFormatted = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+
   const rsvpData = {
     id: Date.now(),
     name, email, attendance, guestOf, guestCount, eventTarget,
-    submittedAt: new Date().toLocaleString('vi-VN'),
+    submittedAt: timeFormatted,
+    // Các cột chính xác theo Google Sheet
+    "Thời gian": timeFormatted,
+    "Họ và tên": name,
+    "Trạng thái tham dự": attendance,
+    "Phân loại khách": guestOf,
+    "Số lượng": guestCount,
+    "Sự kiện tham gia": eventTarget,
+    "lời chúc phúc": "",
     // Aliases to match Google Apps Script variables
+    time: timeFormatted,
+    date: timeFormatted,
     guest_of: guestOf,
     guest: guestOf,
     phanLoaiKhach: guestOf,
@@ -740,7 +876,7 @@ async function handleRSVPSubmit(e) {
     }
   } catch (err) {}
 
-  // 2. Always persist to localStorage (works on static hosting, Vercel, Netlify, GitHub Pages)
+  // 3. Always persist to localStorage
   try {
     const list = JSON.parse(localStorage.getItem('wedding_rsvp_entries') || '[]');
     list.unshift(rsvpData);
@@ -750,16 +886,16 @@ async function handleRSVPSubmit(e) {
     updateRSVPCount(list.length);
   } catch (e) {}
 
-  // 3. Permanently dismiss and hide the floating prompt "Bạn sẽ tham gia chứ ?"
+  // 4. Permanently dismiss and hide the floating prompt "Bạn sẽ tham gia chứ ?"
   dismissPromptPermanently();
 
-  // 4. Render inline success confirmation right inside section-rsvp
+  // 5. Render inline success confirmation right inside section-rsvp
   renderRSVPInlineSuccess(rsvpData);
 
-  // 5. Open celebratory modal popup
+  // 6. Open celebratory modal popup
   openRSVPSuccessModal(rsvpData);
 
-  // 6. Show friendly notification toast & reset form
+  // 7. Show friendly notification toast & reset form
   showToast('Xác nhận tham dự thành công! Cảm ơn bạn ❤️');
   document.getElementById('rsvp-form')?.reset();
 
@@ -767,6 +903,16 @@ async function handleRSVPSubmit(e) {
     submitBtn.disabled = false;
     submitBtn.textContent = 'Xác nhận';
   }
+
+  // 8. Tự động chuyển mượt đến form Sổ Lưu Bút và focus vào ô lời chúc
+  setTimeout(() => {
+    closePopup('popup-rsvp-success');
+    scrollToSection('section-guestbook');
+    const wishMsgEl = document.getElementById('wish-message');
+    if (wishMsgEl) {
+      wishMsgEl.focus();
+    }
+  }, 1200);
 }
 
 function renderRSVPInlineSuccess(data) {
@@ -1090,16 +1236,51 @@ function escapeHTML(str) {
 // ==========================================
 function initGuestName() {
   const params = new URLSearchParams(window.location.search);
-  const guestName = params.get('to') || params.get('guest') || params.get('ten') || params.get('name') || params.get('u');
-  const labelEl = document.getElementById('invite-guest-label');
-  if (labelEl) {
-    if (guestName && guestName.trim()) {
-      labelEl.innerHTML = `<span style="font-size:14px; opacity:0.85;">Kính mời:</span> <strong style="color: #987289; font-size:17px; font-weight:700;">${escapeHTML(guestName.trim())}</strong>`;
-      const rsvpInput = document.getElementById('rsvp-name');
-      if (rsvpInput && !rsvpInput.value) {
-        rsvpInput.value = guestName.trim();
-      }
+  const guestNameParam = params.get('to') || params.get('guest') || params.get('ten') || params.get('name') || params.get('u');
+  let savedGuestName = '';
+  try {
+    savedGuestName = localStorage.getItem('wedding_guest_name') || '';
+    if (!savedGuestName) {
+      const lastRsvp = JSON.parse(localStorage.getItem('wedding_last_rsvp') || '{}');
+      if (lastRsvp.name) savedGuestName = lastRsvp.name;
     }
+  } catch (e) {}
+
+  const activeName = (guestNameParam && guestNameParam.trim()) || (savedGuestName && savedGuestName.trim()) || '';
+
+  const labelEl = document.getElementById('invite-guest-label');
+  if (labelEl && activeName) {
+    labelEl.innerHTML = `<span style="font-size:14px; opacity:0.85;">Kính mời:</span> <strong style="color: #987289; font-size:17px; font-weight:700;">${escapeHTML(activeName)}</strong>`;
+  }
+
+  const rsvpInput = document.getElementById('rsvp-name');
+  const wishInput = document.getElementById('wish-name');
+
+  if (activeName) {
+    if (rsvpInput && !rsvpInput.value) {
+      rsvpInput.value = activeName;
+    }
+    if (wishInput && !wishInput.value) {
+      wishInput.value = activeName;
+    }
+  }
+
+  // Tự động đồng bộ tên hai chiều: khi gõ ở form RSVP thì form Sổ lưu bút tự động hiển thị tên
+  if (rsvpInput && wishInput) {
+    rsvpInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      wishInput.value = val;
+      if (val.trim()) {
+        localStorage.setItem('wedding_guest_name', val.trim());
+      }
+    });
+
+    wishInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if (val.trim()) {
+        localStorage.setItem('wedding_guest_name', val.trim());
+      }
+    });
   }
 }
 
