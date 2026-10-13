@@ -456,22 +456,6 @@ const DEFAULT_WISHES = [
     time: '3 ngày trước',
     createdAt: '2026-10-08T10:15:00.000Z',
     likes: 9
-  },
-  {
-    id: 3,
-    name: 'Lê Quang Huy',
-    message: 'Chúc mừng chú rể đẹp trai nhất năm và cô dâu xinh đẹp! Sớm cho anh em ăn cỗ đầy tháng nhé 👨‍👩‍👧',
-    time: '5 ngày trước',
-    createdAt: '2026-10-06T18:40:00.000Z',
-    likes: 15
-  },
-  {
-    id: 4,
-    name: 'Đỗ Thanh Hằng',
-    message: 'Mừng ngày chung đôi của hai người bạn thân thiết! Chúc tổ ấm nhỏ luôn tràn ngập tiếng cười và hạnh phúc viên mãn ❤️',
-    time: '1 tuần trước',
-    createdAt: '2026-10-04T09:20:00.000Z',
-    likes: 8
   }
 ];
 
