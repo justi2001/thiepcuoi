@@ -79,28 +79,79 @@ function setPortraitImage(gender, src, element) {
 // ==========================================
 const audio = document.getElementById('wedding-audio');
 const audioToggleBtn = document.getElementById('audio-toggle-btn');
+const dockMusicBtn = document.getElementById('dock-music-btn');
 const envelopeOverlay = document.getElementById('envelope-overlay');
 const openEnvelopeBtn = document.getElementById('open-envelope-btn');
 
 let isAudioPlaying = false;
+let envelopeOpened = false;
+
+function updateAudioUI(playing) {
+  isAudioPlaying = playing;
+  if (audioToggleBtn) {
+    if (playing) {
+      audioToggleBtn.classList.add('spinning');
+      audioToggleBtn.classList.remove('paused');
+    } else {
+      audioToggleBtn.classList.remove('spinning');
+      audioToggleBtn.classList.add('paused');
+    }
+  }
+  if (dockMusicBtn) {
+    if (playing) {
+      dockMusicBtn.classList.add('active');
+    } else {
+      dockMusicBtn.classList.remove('active');
+    }
+  }
+}
+
+// Native audio events to ensure UI stays perfectly synced
+if (audio) {
+  audio.addEventListener('play', () => updateAudioUI(true));
+  audio.addEventListener('pause', () => updateAudioUI(false));
+  audio.addEventListener('ended', () => {
+    audio.currentTime = 0;
+    audio.play().catch(() => {});
+  });
+}
 
 function playAudio() {
   if (!audio) return;
-  audio.play().then(() => {
-    isAudioPlaying = true;
-    audioToggleBtn.classList.add('spinning');
-    audioToggleBtn.classList.remove('paused');
-  }).catch(err => {
-    console.log('Autoplay blocked, waiting for interaction:', err);
-  });
+  audio.muted = false;
+
+  // If audio is not yet loaded, trigger load
+  if (audio.readyState === 0) {
+    audio.load();
+  }
+
+  const playPromise = audio.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      updateAudioUI(true);
+    }).catch(err => {
+      console.log('Audio autoplay blocked or deferred, waiting for user gesture:', err);
+      // Fallback: unlock immediately on the very next user gesture anywhere
+      const fallbackUnlock = () => {
+        if (!isAudioPlaying && audio) {
+          audio.muted = false;
+          audio.play().then(() => updateAudioUI(true)).catch(() => {});
+        }
+        ['click', 'touchstart', 'touchend', 'pointerdown'].forEach(ev => {
+          document.removeEventListener(ev, fallbackUnlock);
+        });
+      };
+      ['click', 'touchstart', 'touchend', 'pointerdown'].forEach(ev => {
+        document.addEventListener(ev, fallbackUnlock, { once: true, passive: true });
+      });
+    });
+  }
 }
 
 function pauseAudio() {
   if (!audio) return;
   audio.pause();
-  isAudioPlaying = false;
-  audioToggleBtn.classList.remove('spinning');
-  audioToggleBtn.classList.add('paused');
+  updateAudioUI(false);
 }
 
 function toggleAudio() {
@@ -121,10 +172,13 @@ if (audioToggleBtn) {
 // 2. ENVELOPE OPENING & SMOOTH SCROLL UNLOCK
 // ==========================================
 function openWeddingEnvelope() {
+  if (envelopeOpened) return;
   const overlay = document.getElementById('envelope-overlay');
   if (!overlay || overlay.classList.contains('opened')) return;
 
-  // 1. Play background music
+  envelopeOpened = true;
+
+  // 1. Play background music immediately inside user event
   playAudio();
 
   // 2. Add opened class for smooth double-door opening
@@ -148,17 +202,23 @@ function openWeddingEnvelope() {
   }, 1300);
 }
 
-// Bind center seal button and overlay click
+// Bind center seal button and overlay click/touch
 if (openEnvelopeBtn) {
-  openEnvelopeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    openWeddingEnvelope();
+  ['click', 'touchend'].forEach(evtType => {
+    openEnvelopeBtn.addEventListener(evtType, (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      openWeddingEnvelope();
+    }, { passive: false });
   });
 }
 
 if (envelopeOverlay) {
-  envelopeOverlay.addEventListener('click', () => {
-    openWeddingEnvelope();
+  ['click', 'touchend'].forEach(evtType => {
+    envelopeOverlay.addEventListener(evtType, (e) => {
+      if (envelopeOpened) return;
+      openWeddingEnvelope();
+    }, { passive: true });
   });
 }
 

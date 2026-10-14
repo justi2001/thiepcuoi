@@ -23,8 +23,8 @@
 </head>
 <body class="envelope-locked">
 
-  <!-- Audio Element (Lazy Preload) -->
-  <audio id="wedding-audio" loop preload="none">
+  <!-- Audio Element (Preloaded with direct src & loop) -->
+  <audio id="wedding-audio" src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/audio-templates/8fe899fe-9769-440a-bc4c-f7171f46a5d5.mp3" loop preload="auto" playsinline webkit-playsinline>
     <source src="https://s3-hcm-r2.s3cloud.vn/thiepcuoi-mehappy/audio-templates/8fe899fe-9769-440a-bc4c-f7171f46a5d5.mp3" type="audio/mpeg">
   </audio>
 
@@ -55,7 +55,7 @@
   <div id="particles-container" class="particles-container"></div>
 
   <!-- Floating Audio Disc Control (Top Right) -->
-  <div id="audio-toggle-btn" class="audio-toggle-btn spinning" title="Bật/Tắt nhạc nền">
+  <div id="audio-toggle-btn" class="audio-toggle-btn paused" title="Bật/Tắt nhạc nền">
     <div class="music-disc">
       <div class="disc-groove"></div>
       <div class="disc-center">
