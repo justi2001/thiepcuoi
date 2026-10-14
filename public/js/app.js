@@ -821,7 +821,7 @@ async function handleWishSubmit(e) {
 // ==========================================
 // 11. RSVP FORM SUBMISSION & GOOGLE SHEETS SYNC
 // ==========================================
-const GOOGLE_SCRIPT_RSVP_URL = 'https://script.google.com/macros/s/AKfycby0z5wKKcfiDLKidcTkVPO3SfBs074Gd_4SbZ_iksVAoYL91guZvahi3CrbojhednhCfg/exec';
+const GOOGLE_SCRIPT_RSVP_URL = 'https://script.google.com/macros/s/AKfycbxVDiRcTBWRAM9k6VNq1Q_eBA-jjpworYfGkE9ytwdV42N-PdyeHqRewcbngO2VS95E/exec';
 
 function handleAttendanceChange(val) {
   const detailsRow = document.getElementById('rsvp-details-row');
